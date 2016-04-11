@@ -16,19 +16,19 @@ Usage
 Repository Structure
 --------------------
 
-docs: Contains a copy of the presentation slides and final and report.
+"""docs""": Contains a copy of the presentation slides and final and report.
 
-src/software/edge_generation: Contains matlab, python scripts used to compute the HDR images. Sample images used.
+"""src/software/edge_generation""": Contains matlab, python scripts used to compute the HDR images. Sample images used.
 
-src/fpga/hdr_final/toplevel/ddr_dma_v2.xpr: The Vivado project for the hardware
+"""src/fpga/hdr_final/toplevel/ddr_dma_v2.xpr""": The Vivado project for the hardware
 
-src/fpga/hdr_final/toplevel/ddr_dma_v2/ddr_dma_v2.sdk: Contains the SDK project files for the Microblaze program
+"""src/fpga/hdr_final/toplevel/ddr_dma_v2/ddr_dma_v2.sdk""": Contains the SDK project files for the Microblaze program
 
-src/fpga/hdr_final/edge_new:Contains the Vivado project files for the object detection IP block
+"""src/fpga/hdr_final/edge_new""": Contains the Vivado project files for the object detection IP block
 
-src/fpga/hdr_final/hdr_ip_sof_fix: Contains the Vivado project files for the HDR IP block
+"""src/fpga/hdr_final/hdr_ip_sof_fix""": Contains the Vivado project files for the HDR IP block
 
-src/fpga/hdr_final/video_to_axis: Contains the Vivado project files for the video to AXI IP block
+"""src/fpga/hdr_final/video_to_axis""": Contains the Vivado project files for the video to AXI IP block
 
 Authors
 -------
