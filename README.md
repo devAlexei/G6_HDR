@@ -3,7 +3,7 @@
 HDR Object Detection
 =======================================================================================
 
-This project demonstrates the enhancements that can be made to the detection of select objects by using HDR image processing instead of normal image auto-exposure settings. The output, an edge-detected image, can be directly compared against the auto-exposed edge-detected image and improvements can be observed.
+  This project demonstrates the enhancements that can be made to the detection of select objects by using HDR image processing instead of normal image auto-exposure settings. The output, an edge-detected image, can be directly compared against the auto-exposed edge-detected image and improvements can be observed.
 
 Usage
 -----
@@ -33,10 +33,10 @@ Repository Structure
 Authors
 -------
 
-Yuanfang Li
+Yuanfang Li,
 
-Rose Li
+Rose Li,
 
-Alex Papanicolaou
+Alex Papanicolaou,
 
 Kenan Hu
