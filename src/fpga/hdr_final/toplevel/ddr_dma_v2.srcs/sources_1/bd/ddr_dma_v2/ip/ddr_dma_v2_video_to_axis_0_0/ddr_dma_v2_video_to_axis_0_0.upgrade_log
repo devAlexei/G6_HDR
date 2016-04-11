@@ -1,0 +1,16 @@
+Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2015.1 (win64) Build 1215546 Mon Apr 27 19:22:08 MDT 2015
+| Date         : Mon Apr 04 10:13:41 2016
+| Host         : yli-pc running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7a100tcsg324-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'ddr_dma_v2_video_to_axis_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the update of ddr_dma_v2_video_to_axis_0_0 (xilinx.com:user:video_to_axis:1.0 (Rev. 1)) to current project options.
+

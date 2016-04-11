@@ -1,0 +1,494 @@
+
+// First include the BSP headers and standard libraries.
+#include "xil_printf.h"
+#include "xparameters.h"
+#include "xio.h"
+#include "xspi.h"
+#include "xintc.h"
+#include "xtft.h"
+#include "xaxidma.h"
+#include "xdebug.h"
+#include "xil_exception.h"
+#include "microblaze_sleep.h"
+
+// Now include project-specific headers.
+#include "main.h"
+#include "platform.h"
+#include "diskio.h"
+#include "ff.h"
+
+/* DEFINITIONS FOR VGA */
+#define DISPLAY_COLUMNS  640
+#define DISPLAY_ROWS     480
+#define ACTUAL_ROWS     360
+#define BLACK_BAR_ROWS     60
+
+/* DEFINITIONS FOR DMA */
+#define DMA_DEV_ID	XPAR_AXIDMA_0_DEVICE_ID
+#define TX_BUFFER_BASE	0x80000000		//image source
+#define RX_BUFFER_BASE	0x84000000		//frame buffer
+#define MAX_PKT_LEN		0xA00			//640x4 - one row of image data in bytes
+#define MAX_PKT_LEN_RX	0xA04
+
+/* BASE ADDRESSES FOR IPs */
+volatile unsigned int *ddr_base = (unsigned int*)0x80000000;
+volatile unsigned int *frame_ptr = (unsigned int*)0x84000000;
+volatile unsigned int *tft_regs = (unsigned int*)0x44A00000;
+
+// Function Declarations
+static int SetupInterruptSystem();
+
+XIntc InterruptController;
+XAxiDma AxiDma;
+
+
+static short *pt = 0;
+int pt_temp = 0;
+
+
+int main() {
+
+	int i;
+	int j;
+	int k = 0;
+	unsigned int temp;
+	int Status;
+	XAxiDma_Config *CfgPtr;
+	u8 *TxBufferPtr = (u8 *)TX_BUFFER_BASE;
+	u8 *RxBufferPtr = (u8 *)RX_BUFFER_BASE;
+
+	//SD
+    FATFS FatFs;
+    FIL FHandle;
+    //init_platform();
+
+
+
+    if (SetupInterruptSystem() != XST_SUCCESS) {
+    	xil_printf("Failed to initialize Interrupts.\n\r");
+    	return -1;
+    }
+
+    print("Platform Loaded.\n\r");
+
+	MB_Sleep(500);
+
+	xil_printf("Setting address\r\n");
+	//Assign address of image memory
+	temp = (*tft_regs)&0x001FFFFF;
+	*tft_regs = 0x84000000|temp;
+
+	xil_printf("Enable TFT\r\n");
+	//Enable TFT
+	temp = (*(tft_regs+4))&0xFFFFFFF3;
+	*(tft_regs+4) = temp|0x00000001;
+
+	for(i = 0; i < DISPLAY_ROWS; i++){ //i = 0:59
+		for(j = 0; j<DISPLAY_COLUMNS; j++){
+			frame_ptr[((i)*1024)+j] = 0x00000000;
+		}
+	}
+
+
+    if (f_mount(&FatFs, "", 0) != FR_OK) {
+        xil_printf("Failed to mount filesystem.\n\r");
+        return;
+    }
+
+    //image 1
+    if (f_open(&FHandle, "da.bin", FA_READ) != FR_OK) {
+            xil_printf("Failed to open da.bin.\n\r");
+            return;
+        }
+	xil_printf("Writing image 1\r\n");
+	for(i = 0; i < BLACK_BAR_ROWS; i++){ //i = 0:59
+		for(j = 0; j<DISPLAY_COLUMNS; j++){
+			f_read(&FHandle, &pt, 4, NULL);
+			//frame_ptr[((i+BLACK_BAR_ROWS)*1024)+j] = pt;
+		}
+	}
+	for (i = BLACK_BAR_ROWS; i<ACTUAL_ROWS+BLACK_BAR_ROWS; i++){ //i = 60:419
+			for (j=0; j<DISPLAY_COLUMNS; j++){
+				f_read(&FHandle, &pt, 4, NULL);
+				ddr_base[(k*DISPLAY_COLUMNS*ACTUAL_ROWS)+((i-BLACK_BAR_ROWS)*DISPLAY_COLUMNS)+j] = pt;
+				pt_temp = ((0x00FF0000)&((int)pt<<(8)))|((0x0000FF00)&((int)pt>>(8)))|((0x000000FF)&((int)pt>>(24)));
+				frame_ptr[((i)*1024)+j] = pt_temp;
+			}
+	}
+	f_close(&FHandle);
+	k++;
+
+
+	//image 2
+    if (f_open(&FHandle, "db.bin", FA_READ) != FR_OK) {
+            xil_printf("Failed to open db.bin.\n\r");
+            return;
+        }
+	xil_printf("Writing image 2\r\n");
+	for(i = 0; i < BLACK_BAR_ROWS; i++){ //i = 0:59
+		for(j = 0; j<DISPLAY_COLUMNS; j++){
+			f_read(&FHandle, &pt, 4, NULL);
+		}
+	}
+	for (i = BLACK_BAR_ROWS; i<ACTUAL_ROWS+BLACK_BAR_ROWS; i++){ //i = 60:419
+			for (j=0; j<DISPLAY_COLUMNS; j++){
+				f_read(&FHandle, &pt, 4, NULL);
+				ddr_base[(k*DISPLAY_COLUMNS*ACTUAL_ROWS)+((i-BLACK_BAR_ROWS)*DISPLAY_COLUMNS)+j] = pt;
+				pt_temp = ((0x00FF0000)&((int)pt<<(8)))|((0x0000FF00)&((int)pt>>(8)))|((0x000000FF)&((int)pt>>(24)));
+				frame_ptr[((i)*1024)+j] = pt_temp;
+			}
+	}
+	f_close(&FHandle);
+	k++;
+
+	//image 3
+    if (f_open(&FHandle, "dg.bin", FA_READ) != FR_OK) {
+            xil_printf("Failed to open dc.bin.\n\r");
+            return;
+        }
+	xil_printf("Writing image 3\r\n");
+	for(i = 0; i < BLACK_BAR_ROWS; i++){ //i = 0:59
+		for(j = 0; j<DISPLAY_COLUMNS; j++){
+			f_read(&FHandle, &pt, 4, NULL);
+		}
+	}
+	for (i = BLACK_BAR_ROWS; i<ACTUAL_ROWS+BLACK_BAR_ROWS; i++){ //i = 60:419
+			for (j=0; j<DISPLAY_COLUMNS; j++){
+				f_read(&FHandle, &pt, 4, NULL);
+				ddr_base[(k*DISPLAY_COLUMNS*ACTUAL_ROWS)+((i-BLACK_BAR_ROWS)*DISPLAY_COLUMNS)+j] = pt;
+				pt_temp = ((0x00FF0000)&((int)pt<<(8)))|((0x0000FF00)&((int)pt>>(8)))|((0x000000FF)&((int)pt>>(24)));
+				frame_ptr[((i)*1024)+j] = pt_temp;
+			}
+	}
+	f_close(&FHandle);
+	k++;
+
+	//image 4
+    if (f_open(&FHandle, "dh.bin", FA_READ) != FR_OK) {
+            xil_printf("Failed to open dd.bin.\n\r");
+            return;
+        }
+	xil_printf("Writing image 4\r\n");
+	for(i = 0; i < BLACK_BAR_ROWS; i++){ //i = 0:59
+		for(j = 0; j<DISPLAY_COLUMNS; j++){
+			f_read(&FHandle, &pt, 4, NULL);
+		}
+	}
+	for (i = BLACK_BAR_ROWS; i<ACTUAL_ROWS+BLACK_BAR_ROWS; i++){ //i = 60:419
+			for (j=0; j<DISPLAY_COLUMNS; j++){
+				f_read(&FHandle, &pt, 4, NULL);
+				ddr_base[(k*DISPLAY_COLUMNS*ACTUAL_ROWS)+((i-BLACK_BAR_ROWS)*DISPLAY_COLUMNS)+j] = pt;
+				pt_temp = ((0x00FF0000)&((int)pt<<(8)))|((0x0000FF00)&((int)pt>>(8)))|((0x000000FF)&((int)pt>>(24)));
+				frame_ptr[((i)*1024)+j] = pt_temp;
+			}
+	}
+	f_close(&FHandle);
+
+	/* END */
+
+	/* BEGIN - TRANSFER DATA FROM DDR TO FIFO, 1 ROW AT A TIME */
+
+	//USING API
+
+	//Configure DMA in Simple (Direct Register) mode with polling
+	CfgPtr = XAxiDma_LookupConfig(DMA_DEV_ID);
+	if (!CfgPtr) {
+		xil_printf("No config found for %d\r\n", DMA_DEV_ID);
+		return XST_FAILURE;
+	}
+
+	Status = XAxiDma_CfgInitialize(&AxiDma, CfgPtr);
+	if (Status != XST_SUCCESS) {
+		xil_printf("Initialization failed %d\r\n", Status);
+		return XST_FAILURE;
+	}
+
+	if(XAxiDma_HasSg(&AxiDma)){
+		xil_printf("Device configured as SG mode \r\n");
+		return XST_FAILURE;
+	}
+
+	XAxiDma_IntrDisable(&AxiDma, XAXIDMA_IRQ_ALL_MASK, XAXIDMA_DEVICE_TO_DMA);
+	XAxiDma_IntrDisable(&AxiDma, XAXIDMA_IRQ_ALL_MASK, XAXIDMA_DMA_TO_DEVICE);
+
+	Xil_DCacheFlushRange((UINTPTR)TxBufferPtr, MAX_PKT_LEN);
+	Xil_DCacheFlushRange((UINTPTR)RxBufferPtr, MAX_PKT_LEN);
+
+
+
+	xil_printf("Start Transfer \r\n");
+
+	//Start transfer one row at a time for first three rows
+
+	//TX IMAGE 1
+			TxBufferPtr = (u8 *)(TX_BUFFER_BASE+(DISPLAY_COLUMNS*4*0));
+			Status = XAxiDma_SimpleTransfer(&AxiDma, (UINTPTR)TxBufferPtr, MAX_PKT_LEN, XAXIDMA_DMA_TO_DEVICE);
+			if (Status != XST_SUCCESS) {
+				return XST_FAILURE;
+			}
+			//xil_printf("Start Transfer image 1 for row %d\r\n", 0);
+			while (XAxiDma_Busy(&AxiDma,XAXIDMA_DMA_TO_DEVICE)){
+			}
+
+			//TX IMAGE 2
+
+			TxBufferPtr = (u8 *)(TX_BUFFER_BASE+(DISPLAY_COLUMNS*4*0)+4*ACTUAL_ROWS*DISPLAY_COLUMNS*1);
+			Status = XAxiDma_SimpleTransfer(&AxiDma, (UINTPTR)TxBufferPtr, MAX_PKT_LEN, XAXIDMA_DMA_TO_DEVICE);
+			if (Status != XST_SUCCESS) {
+				return XST_FAILURE;
+			}
+			//xil_printf("Start Transfer image 2 for row %d\r\n", i);
+			while (XAxiDma_Busy(&AxiDma,XAXIDMA_DMA_TO_DEVICE)){
+			}
+
+			//TX IMAGE 3
+
+			TxBufferPtr = (u8 *)(TX_BUFFER_BASE+(DISPLAY_COLUMNS*4*0)+4*ACTUAL_ROWS*DISPLAY_COLUMNS*2);
+			Status = XAxiDma_SimpleTransfer(&AxiDma, (UINTPTR)TxBufferPtr, MAX_PKT_LEN, XAXIDMA_DMA_TO_DEVICE);
+			if (Status != XST_SUCCESS) {
+				return XST_FAILURE;
+			}
+			//xil_printf("Start Transfer image 3 for row %d\r\n", i);
+			while (XAxiDma_Busy(&AxiDma,XAXIDMA_DMA_TO_DEVICE)){
+			}
+
+			//TX IMAGE 4
+
+			TxBufferPtr = (u8 *)(TX_BUFFER_BASE+(DISPLAY_COLUMNS*4*0)+4*ACTUAL_ROWS*DISPLAY_COLUMNS*3);
+			Status = XAxiDma_SimpleTransfer(&AxiDma, (UINTPTR)TxBufferPtr, MAX_PKT_LEN, XAXIDMA_DMA_TO_DEVICE);
+			if (Status != XST_SUCCESS) {
+				return XST_FAILURE;
+			}
+			//xil_printf("Start Transfer image 4 for row %d\r\n", 0);
+			while (XAxiDma_Busy(&AxiDma,XAXIDMA_DMA_TO_DEVICE)){
+			}
+
+			//TX IMAGE 1
+			TxBufferPtr = (u8 *)(TX_BUFFER_BASE+(DISPLAY_COLUMNS*4*(0+1)));
+			Status = XAxiDma_SimpleTransfer(&AxiDma, (UINTPTR)TxBufferPtr, MAX_PKT_LEN, XAXIDMA_DMA_TO_DEVICE);
+			if (Status != XST_SUCCESS) {
+				return XST_FAILURE;
+			}
+			//xil_printf("Start Transfer image 1 for row %d\r\n", 0);
+			while (XAxiDma_Busy(&AxiDma,XAXIDMA_DMA_TO_DEVICE)){
+			}
+
+			//TX IMAGE 2
+
+			TxBufferPtr = (u8 *)(TX_BUFFER_BASE+(DISPLAY_COLUMNS*4*(0+1))+4*ACTUAL_ROWS*DISPLAY_COLUMNS*1);
+			Status = XAxiDma_SimpleTransfer(&AxiDma, (UINTPTR)TxBufferPtr, MAX_PKT_LEN, XAXIDMA_DMA_TO_DEVICE);
+			if (Status != XST_SUCCESS) {
+				return XST_FAILURE;
+			}
+			//xil_printf("Start Transfer image 2 for row %d\r\n", i);
+			while (XAxiDma_Busy(&AxiDma,XAXIDMA_DMA_TO_DEVICE)){
+			}
+
+			//TX IMAGE 3
+
+			TxBufferPtr = (u8 *)(TX_BUFFER_BASE+(DISPLAY_COLUMNS*4*(0+1))+4*ACTUAL_ROWS*DISPLAY_COLUMNS*2);
+			Status = XAxiDma_SimpleTransfer(&AxiDma, (UINTPTR)TxBufferPtr, MAX_PKT_LEN, XAXIDMA_DMA_TO_DEVICE);
+			if (Status != XST_SUCCESS) {
+				return XST_FAILURE;
+			}
+			//xil_printf("Start Transfer image 3 for row %d\r\n", i);
+			while (XAxiDma_Busy(&AxiDma,XAXIDMA_DMA_TO_DEVICE)){
+			}
+
+			//TX IMAGE 4
+
+			TxBufferPtr = (u8 *)(TX_BUFFER_BASE+(DISPLAY_COLUMNS*4*(0+1))+4*ACTUAL_ROWS*DISPLAY_COLUMNS*3);
+			Status = XAxiDma_SimpleTransfer(&AxiDma, (UINTPTR)TxBufferPtr, MAX_PKT_LEN, XAXIDMA_DMA_TO_DEVICE);
+			if (Status != XST_SUCCESS) {
+				return XST_FAILURE;
+			}
+			//xil_printf("Start Transfer image 4 for row %d\r\n", 0);
+			while (XAxiDma_Busy(&AxiDma,XAXIDMA_DMA_TO_DEVICE)){
+			}
+
+			//TX IMAGE 1
+			TxBufferPtr = (u8 *)(TX_BUFFER_BASE+(DISPLAY_COLUMNS*4*(0+2)));
+			Status = XAxiDma_SimpleTransfer(&AxiDma, (UINTPTR)TxBufferPtr, MAX_PKT_LEN, XAXIDMA_DMA_TO_DEVICE);
+			if (Status != XST_SUCCESS) {
+				return XST_FAILURE;
+			}
+			//xil_printf("Start Transfer image 1 for row %d\r\n", 0);
+			while (XAxiDma_Busy(&AxiDma,XAXIDMA_DMA_TO_DEVICE)){
+			}
+
+			//TX IMAGE 2
+
+			TxBufferPtr = (u8 *)(TX_BUFFER_BASE+(DISPLAY_COLUMNS*4*(0+2))+4*ACTUAL_ROWS*DISPLAY_COLUMNS*1);
+			Status = XAxiDma_SimpleTransfer(&AxiDma, (UINTPTR)TxBufferPtr, MAX_PKT_LEN, XAXIDMA_DMA_TO_DEVICE);
+			if (Status != XST_SUCCESS) {
+				return XST_FAILURE;
+			}
+			//xil_printf("Start Transfer image 2 for row %d\r\n", i);
+			while (XAxiDma_Busy(&AxiDma,XAXIDMA_DMA_TO_DEVICE)){
+			}
+
+			//TX IMAGE 3
+
+			TxBufferPtr = (u8 *)(TX_BUFFER_BASE+(DISPLAY_COLUMNS*4*(0+2))+4*ACTUAL_ROWS*DISPLAY_COLUMNS*2);
+			Status = XAxiDma_SimpleTransfer(&AxiDma, (UINTPTR)TxBufferPtr, MAX_PKT_LEN, XAXIDMA_DMA_TO_DEVICE);
+			if (Status != XST_SUCCESS) {
+				return XST_FAILURE;
+			}
+			//xil_printf("Start Transfer image 3 for row %d\r\n", i);
+			while (XAxiDma_Busy(&AxiDma,XAXIDMA_DMA_TO_DEVICE)){
+			}
+
+			//TX IMAGE 4
+
+			TxBufferPtr = (u8 *)(TX_BUFFER_BASE+(DISPLAY_COLUMNS*4*(0+2))+4*ACTUAL_ROWS*DISPLAY_COLUMNS*3);
+			Status = XAxiDma_SimpleTransfer(&AxiDma, (UINTPTR)TxBufferPtr, MAX_PKT_LEN, XAXIDMA_DMA_TO_DEVICE);
+			if (Status != XST_SUCCESS) {
+				return XST_FAILURE;
+			}
+			//xil_printf("Start Transfer image 4 for row %d\r\n", 0);
+			while (XAxiDma_Busy(&AxiDma,XAXIDMA_DMA_TO_DEVICE)){
+			}
+
+			RxBufferPtr = (u8 *)(RX_BUFFER_BASE+(4096*BLACK_BAR_ROWS));
+			Status = XAxiDma_SimpleTransfer(&AxiDma, (UINTPTR)(RxBufferPtr-4), MAX_PKT_LEN_RX, XAXIDMA_DEVICE_TO_DMA);
+			if (Status != XST_SUCCESS) {
+				return XST_FAILURE;
+			}
+			xil_printf("Start Transfer back for row %d\r\n", i);
+			while ((XAxiDma_Busy(&AxiDma,XAXIDMA_DEVICE_TO_DMA)) || (XAxiDma_Busy(&AxiDma,XAXIDMA_DMA_TO_DEVICE))) {
+
+			}
+
+
+	for(i = 3; i < ACTUAL_ROWS; i ++) {
+		//new code
+		//TX IMAGE 1
+		TxBufferPtr = (u8 *)(TX_BUFFER_BASE+(DISPLAY_COLUMNS*4*i));
+		Status = XAxiDma_SimpleTransfer(&AxiDma, (UINTPTR)TxBufferPtr, MAX_PKT_LEN, XAXIDMA_DMA_TO_DEVICE);
+		if (Status != XST_SUCCESS) {
+			return XST_FAILURE;
+		}
+		//xil_printf("Start Transfer image 1 for row %d\r\n", i);
+		while (XAxiDma_Busy(&AxiDma,XAXIDMA_DMA_TO_DEVICE)){
+		}
+
+		//TX IMAGE 2
+
+		TxBufferPtr = (u8 *)(TX_BUFFER_BASE+(DISPLAY_COLUMNS*4*i)+4*ACTUAL_ROWS*DISPLAY_COLUMNS*1);
+		Status = XAxiDma_SimpleTransfer(&AxiDma, (UINTPTR)TxBufferPtr, MAX_PKT_LEN, XAXIDMA_DMA_TO_DEVICE);
+		if (Status != XST_SUCCESS) {
+			return XST_FAILURE;
+		}
+		//xil_printf("Start Transfer image 2 for row %d\r\n", i);
+		while (XAxiDma_Busy(&AxiDma,XAXIDMA_DMA_TO_DEVICE)){
+		}
+
+		//TX IMAGE 3
+
+		TxBufferPtr = (u8 *)(TX_BUFFER_BASE+(DISPLAY_COLUMNS*4*i)+4*ACTUAL_ROWS*DISPLAY_COLUMNS*2);
+		Status = XAxiDma_SimpleTransfer(&AxiDma, (UINTPTR)TxBufferPtr, MAX_PKT_LEN, XAXIDMA_DMA_TO_DEVICE);
+		if (Status != XST_SUCCESS) {
+			return XST_FAILURE;
+		}
+		//xil_printf("Start Transfer image 3 for row %d\r\n", i);
+		while (XAxiDma_Busy(&AxiDma,XAXIDMA_DMA_TO_DEVICE)){
+		}
+
+		//TX IMAGE 4
+
+		TxBufferPtr = (u8 *)(TX_BUFFER_BASE+(DISPLAY_COLUMNS*4*i)+4*ACTUAL_ROWS*DISPLAY_COLUMNS*3);
+		Status = XAxiDma_SimpleTransfer(&AxiDma, (UINTPTR)TxBufferPtr, MAX_PKT_LEN, XAXIDMA_DMA_TO_DEVICE);
+		if (Status != XST_SUCCESS) {
+			return XST_FAILURE;
+		}
+		//xil_printf("Start Transfer image 4 for row %d\r\n", i);
+		while (XAxiDma_Busy(&AxiDma,XAXIDMA_DMA_TO_DEVICE)){
+		}
+
+
+		RxBufferPtr = (u8 *)(RX_BUFFER_BASE+(4096*(i+BLACK_BAR_ROWS)));
+		Status = XAxiDma_SimpleTransfer(&AxiDma, (UINTPTR)(RxBufferPtr-4), MAX_PKT_LEN_RX, XAXIDMA_DEVICE_TO_DMA);
+		if (Status != XST_SUCCESS) {
+			return XST_FAILURE;
+		}
+		//xil_printf("Start Transfer back for row %d\r\n", i);
+		while ((XAxiDma_Busy(&AxiDma,XAXIDMA_DEVICE_TO_DMA)) || (XAxiDma_Busy(&AxiDma,XAXIDMA_DMA_TO_DEVICE))) {
+
+		}
+
+
+
+	}
+
+	xil_printf("Done transferring \r\n");
+
+
+
+
+/*
+	xil_printf("Setting address\r\n");
+	//Assign address of image memory
+	temp = (*tft_regs)&0x001FFFFF;
+	*tft_regs = 0x84000000|temp;
+
+	xil_printf("Enable TFT\r\n");
+	//Enable TFT
+	temp = (*(tft_regs+4))&0xFFFFFFF3;
+	*(tft_regs+4) = temp|0x00000001;
+*/
+	//cleanup_platform();
+
+    return 0;
+}
+
+
+
+
+/****************************************************************************
+* This function sets up the interrupt system such that interrupts can occur.
+*
+* @return	XST_SUCCESS if successful else XST_FAILURE.
+*
+* @note		None.
+*
+****************************************************************************/
+static int SetupInterruptSystem()
+{
+
+	int Status;
+
+	/*
+	 * Initialize the interrupt controller driver so that
+	 * it's ready to use, specify the device ID that is generated in
+	 * xparameters.h
+	 */
+	Status = XIntc_Initialize(&InterruptController, INTC_DEVICE_ID);
+	if (Status != XST_SUCCESS) {
+		return XST_FAILURE;
+	}
+
+	/*
+	 * Start the interrupt controller such that interrupts are enabled for
+	 * all devices that cause interrupts, specific real mode so that
+	 * the SPI can cause interrupts thru the interrupt controller.
+	 */
+	Status = XIntc_Start(&InterruptController, XIN_REAL_MODE);
+	if (Status != XST_SUCCESS) {
+		return XST_FAILURE;
+	}
+
+	/*
+	 * Initialize the exception table
+	 */
+	Xil_ExceptionInit();
+
+	/*
+	 * Enable non-critical exceptions
+	 */
+	Xil_ExceptionEnable();
+
+	return XST_SUCCESS;
+}
+
+
+

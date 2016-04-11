@@ -1,0 +1,467 @@
+13:00:45 **** Build of project hdr_fina_test_bsp ****
+make -k all 
+"Running Make include in microblaze_0/libsrc/axidma_v8_1/src"
+make -C microblaze_0/libsrc/axidma_v8_1/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v9.5 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in microblaze_0/libsrc/bram_v4_0/src"
+make -C microblaze_0/libsrc/bram_v4_0/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v9.5 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in microblaze_0/libsrc/cpu_v2_3/src"
+make -C microblaze_0/libsrc/cpu_v2_3/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v9.5 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in microblaze_0/libsrc/intc_v3_3/src"
+make -C microblaze_0/libsrc/intc_v3_3/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v9.5 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in microblaze_0/libsrc/spi_v4_1/src"
+make -C microblaze_0/libsrc/spi_v4_1/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v9.5 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in microblaze_0/libsrc/standalone_v5_0/src"
+make -C microblaze_0/libsrc/standalone_v5_0/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v9.5 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in microblaze_0/libsrc/tft_v5_0/src"
+make -C microblaze_0/libsrc/tft_v5_0/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v9.5 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in microblaze_0/libsrc/uartlite_v3_0/src"
+make -C microblaze_0/libsrc/uartlite_v3_0/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v9.5 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make libs in microblaze_0/libsrc/axidma_v8_1/src"
+make -C microblaze_0/libsrc/axidma_v8_1/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v9.5 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling axidma"
+mb-ar: creating ../../../lib/libxil.a
+"Running Make libs in microblaze_0/libsrc/bram_v4_0/src"
+make -C microblaze_0/libsrc/bram_v4_0/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v9.5 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling bram"
+"Running Make libs in microblaze_0/libsrc/cpu_v2_3/src"
+make -C microblaze_0/libsrc/cpu_v2_3/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v9.5 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling cpu"
+"Running Make libs in microblaze_0/libsrc/intc_v3_3/src"
+make -C microblaze_0/libsrc/intc_v3_3/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v9.5 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling intc"
+"Running Make libs in microblaze_0/libsrc/spi_v4_1/src"
+make -C microblaze_0/libsrc/spi_v4_1/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v9.5 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling spi"
+"Running Make libs in microblaze_0/libsrc/standalone_v5_0/src"
+make -C microblaze_0/libsrc/standalone_v5_0/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v9.5 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling standalone";
+"Running Make libs in microblaze_0/libsrc/tft_v5_0/src"
+make -C microblaze_0/libsrc/tft_v5_0/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v9.5 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling tft"
+"Running Make libs in microblaze_0/libsrc/uartlite_v3_0/src"
+make -C microblaze_0/libsrc/uartlite_v3_0/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v9.5 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling uartlite"
+'Finished building libraries'
+13:00:51 **** Build of configuration Debug for project hdr_fina_test ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../hdr_fina_test_bsp/microblaze_0/include -mlittle-endian -mcpu=v9.5 -mxl-soft-mul -Wl,--no-relax -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building file: ../src/platform.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/platform.o" -I../../hdr_fina_test_bsp/microblaze_0/include -mlittle-endian -mcpu=v9.5 -mxl-soft-mul -Wl,--no-relax -MMD -MP -MF"src/platform.d" -MT"src/platform.d" -o "src/platform.o" "../src/platform.c"
+'Finished building: ../src/platform.c'
+' '
+'Building target: hdr_fina_test.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../hdr_fina_test_bsp/microblaze_0/lib -mlittle-endian -mcpu=v9.5 -mxl-soft-mul -Wl,--no-relax -o "hdr_fina_test.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: hdr_fina_test.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size hdr_fina_test.elf  |tee "hdr_fina_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   8364	    344	   2224	  10932	   2ab4	hdr_fina_test.elf
+'Finished building: hdr_fina_test.elf.size'
+' '
+13:01:53 **** Auto Build of configuration Debug for project hdr_fina_test ****
+make all 
+make: Nothing to be done for `all'.
+13:02:01 **** Clean-only build of configuration Debug for project hdr_fina_test ****
+make clean 
+rm -rf  ./src/diskio.o ./src/ff.o ./src/helloworld.o ./src/platform.o  ./src/diskio.d ./src/ff.d ./src/helloworld.d ./src/platform.d  hdr_fina_test.elf.size  hdr_fina_test.elf
+' '
+13:02:01 **** Auto Build of configuration Debug for project hdr_fina_test ****
+make all 
+'Building file: ../src/diskio.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/diskio.o" -I../../hdr_fina_test_bsp/microblaze_0/include -mlittle-endian -mcpu=v9.5 -mxl-soft-mul -Wl,--no-relax -MMD -MP -MF"src/diskio.d" -MT"src/diskio.d" -o "src/diskio.o" "../src/diskio.c"
+../src/diskio.c: In function 'disk_ioctl':
+../src/diskio.c:344:6: warning: unused variable 'NumRespBytes' [-Wunused-variable]
+  int NumRespBytes;
+      ^
+'Finished building: ../src/diskio.c'
+' '
+'Building file: ../src/ff.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/ff.o" -I../../hdr_fina_test_bsp/microblaze_0/include -mlittle-endian -mcpu=v9.5 -mxl-soft-mul -Wl,--no-relax -MMD -MP -MF"src/ff.d" -MT"src/ff.d" -o "src/ff.o" "../src/ff.c"
+'Finished building: ../src/ff.c'
+' '
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../hdr_fina_test_bsp/microblaze_0/include -mlittle-endian -mcpu=v9.5 -mxl-soft-mul -Wl,--no-relax -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+'Finished building: ../src/main.c'
+' '
+'Building file: ../src/platform.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/platform.o" -I../../hdr_fina_test_bsp/microblaze_0/include -mlittle-endian -mcpu=v9.5 -mxl-soft-mul -Wl,--no-relax -MMD -MP -MF"src/platform.d" -MT"src/platform.d" -o "src/platform.o" "../src/platform.c"
+'Finished building: ../src/platform.c'
+' '
+'Building target: hdr_fina_test.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../hdr_fina_test_bsp/microblaze_0/lib -mlittle-endian -mcpu=v9.5 -mxl-soft-mul -Wl,--no-relax -o "hdr_fina_test.elf"  ./src/diskio.o ./src/ff.o ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: hdr_fina_test.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size hdr_fina_test.elf  |tee "hdr_fina_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  39637	    352	   2239	  42228	   a4f4	hdr_fina_test.elf
+'Finished building: hdr_fina_test.elf.size'
+' '
+13:02:13 **** Auto Build of configuration Debug for project hdr_fina_test ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../hdr_fina_test_bsp/microblaze_0/include -mlittle-endian -mcpu=v9.5 -mxl-soft-mul -Wl,--no-relax -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:89:9: warning: 'return' with no value, in function returning non-void [-Wreturn-type]
+         return;
+         ^
+../src/main.c:95:13: warning: 'return' with no value, in function returning non-void [-Wreturn-type]
+             return;
+             ^
+../src/main.c:107:86: warning: assignment makes integer from pointer without a cast
+     ddr_base[(k*DISPLAY_COLUMNS*ACTUAL_ROWS)+((i-BLACK_BAR_ROWS)*DISPLAY_COLUMNS)+j] = pt;
+                                                                                      ^
+../src/main.c:119:13: warning: 'return' with no value, in function returning non-void [-Wreturn-type]
+             return;
+             ^
+../src/main.c:130:86: warning: assignment makes integer from pointer without a cast
+     ddr_base[(k*DISPLAY_COLUMNS*ACTUAL_ROWS)+((i-BLACK_BAR_ROWS)*DISPLAY_COLUMNS)+j] = pt;
+                                                                                      ^
+../src/main.c:141:13: warning: 'return' with no value, in function returning non-void [-Wreturn-type]
+             return;
+             ^
+../src/main.c:152:86: warning: assignment makes integer from pointer without a cast
+     ddr_base[(k*DISPLAY_COLUMNS*ACTUAL_ROWS)+((i-BLACK_BAR_ROWS)*DISPLAY_COLUMNS)+j] = pt;
+                                                                                      ^
+../src/main.c:163:13: warning: 'return' with no value, in function returning non-void [-Wreturn-type]
+             return;
+             ^
+../src/main.c:174:86: warning: assignment makes integer from pointer without a cast
+     ddr_base[(k*DISPLAY_COLUMNS*ACTUAL_ROWS)+((i-BLACK_BAR_ROWS)*DISPLAY_COLUMNS)+j] = pt;
+                                                                                      ^
+'Finished building: ../src/main.c'
+' '
+'Building target: hdr_fina_test.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../hdr_fina_test_bsp/microblaze_0/lib -mlittle-endian -mcpu=v9.5 -mxl-soft-mul -Wl,--no-relax -o "hdr_fina_test.elf"  ./src/diskio.o ./src/ff.o ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: hdr_fina_test.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size hdr_fina_test.elf  |tee "hdr_fina_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  56413	    424	   3928	  60765	   ed5d	hdr_fina_test.elf
+'Finished building: hdr_fina_test.elf.size'
+' '
+13:03:13 **** Auto Build of configuration Debug for project hdr_fina_test ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../hdr_fina_test_bsp/microblaze_0/include -mlittle-endian -mcpu=v9.5 -mxl-soft-mul -Wl,--no-relax -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:89:9: warning: 'return' with no value, in function returning non-void [-Wreturn-type]
+         return;
+         ^
+../src/main.c:95:13: warning: 'return' with no value, in function returning non-void [-Wreturn-type]
+             return;
+             ^
+../src/main.c:107:86: warning: assignment makes integer from pointer without a cast
+     ddr_base[(k*DISPLAY_COLUMNS*ACTUAL_ROWS)+((i-BLACK_BAR_ROWS)*DISPLAY_COLUMNS)+j] = pt;
+                                                                                      ^
+../src/main.c:119:13: warning: 'return' with no value, in function returning non-void [-Wreturn-type]
+             return;
+             ^
+../src/main.c:130:86: warning: assignment makes integer from pointer without a cast
+     ddr_base[(k*DISPLAY_COLUMNS*ACTUAL_ROWS)+((i-BLACK_BAR_ROWS)*DISPLAY_COLUMNS)+j] = pt;
+                                                                                      ^
+../src/main.c:141:13: warning: 'return' with no value, in function returning non-void [-Wreturn-type]
+             return;
+             ^
+../src/main.c:152:86: warning: assignment makes integer from pointer without a cast
+     ddr_base[(k*DISPLAY_COLUMNS*ACTUAL_ROWS)+((i-BLACK_BAR_ROWS)*DISPLAY_COLUMNS)+j] = pt;
+                                                                                      ^
+../src/main.c:163:13: warning: 'return' with no value, in function returning non-void [-Wreturn-type]
+             return;
+             ^
+../src/main.c:174:86: warning: assignment makes integer from pointer without a cast
+     ddr_base[(k*DISPLAY_COLUMNS*ACTUAL_ROWS)+((i-BLACK_BAR_ROWS)*DISPLAY_COLUMNS)+j] = pt;
+                                                                                      ^
+'Finished building: ../src/main.c'
+' '
+'Building target: hdr_fina_test.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../hdr_fina_test_bsp/microblaze_0/lib -mlittle-endian -mcpu=v9.5 -mxl-soft-mul -Wl,--no-relax -o "hdr_fina_test.elf"  ./src/diskio.o ./src/ff.o ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: hdr_fina_test.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size hdr_fina_test.elf  |tee "hdr_fina_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  56125	    424	   3928	  60477	   ec3d	hdr_fina_test.elf
+'Finished building: hdr_fina_test.elf.size'
+' '
+13:03:40 **** Auto Build of configuration Debug for project hdr_fina_test ****
+make all 
+'Building target: hdr_fina_test.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../hdr_fina_test_bsp/microblaze_0/lib -mlittle-endian -mcpu=v9.5 -mxl-soft-mul -Wl,--no-relax -o "hdr_fina_test.elf"  ./src/diskio.o ./src/ff.o ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: hdr_fina_test.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size hdr_fina_test.elf  |tee "hdr_fina_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  56125	    424	   3928	  60477	   ec3d	hdr_fina_test.elf
+'Finished building: hdr_fina_test.elf.size'
+' '
+13:04:55 **** Incremental Build of configuration Debug for project hdr_fina_test ****
+make all 
+make: Nothing to be done for `all'.
+13:08:41 **** Auto Build of configuration Debug for project hdr_fina_test ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../hdr_fina_test_bsp/microblaze_0/include -mlittle-endian -mcpu=v9.5 -mxl-soft-mul -Wl,--no-relax -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:95:9: warning: 'return' with no value, in function returning non-void [-Wreturn-type]
+         return;
+         ^
+../src/main.c:101:13: warning: 'return' with no value, in function returning non-void [-Wreturn-type]
+             return;
+             ^
+../src/main.c:113:86: warning: assignment makes integer from pointer without a cast
+     ddr_base[(k*DISPLAY_COLUMNS*ACTUAL_ROWS)+((i-BLACK_BAR_ROWS)*DISPLAY_COLUMNS)+j] = pt;
+                                                                                      ^
+../src/main.c:125:13: warning: 'return' with no value, in function returning non-void [-Wreturn-type]
+             return;
+             ^
+../src/main.c:136:86: warning: assignment makes integer from pointer without a cast
+     ddr_base[(k*DISPLAY_COLUMNS*ACTUAL_ROWS)+((i-BLACK_BAR_ROWS)*DISPLAY_COLUMNS)+j] = pt;
+                                                                                      ^
+../src/main.c:147:13: warning: 'return' with no value, in function returning non-void [-Wreturn-type]
+             return;
+             ^
+../src/main.c:158:86: warning: assignment makes integer from pointer without a cast
+     ddr_base[(k*DISPLAY_COLUMNS*ACTUAL_ROWS)+((i-BLACK_BAR_ROWS)*DISPLAY_COLUMNS)+j] = pt;
+                                                                                      ^
+../src/main.c:169:13: warning: 'return' with no value, in function returning non-void [-Wreturn-type]
+             return;
+             ^
+../src/main.c:180:86: warning: assignment makes integer from pointer without a cast
+     ddr_base[(k*DISPLAY_COLUMNS*ACTUAL_ROWS)+((i-BLACK_BAR_ROWS)*DISPLAY_COLUMNS)+j] = pt;
+                                                                                      ^
+'Finished building: ../src/main.c'
+' '
+'Building target: hdr_fina_test.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../hdr_fina_test_bsp/microblaze_0/lib -mlittle-endian -mcpu=v9.5 -mxl-soft-mul -Wl,--no-relax -o "hdr_fina_test.elf"  ./src/diskio.o ./src/ff.o ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: hdr_fina_test.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size hdr_fina_test.elf  |tee "hdr_fina_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  56277	    424	   3928	  60629	   ecd5	hdr_fina_test.elf
+'Finished building: hdr_fina_test.elf.size'
+' '
+13:11:46 **** Auto Build of configuration Debug for project hdr_fina_test ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../hdr_fina_test_bsp/microblaze_0/include -mlittle-endian -mcpu=v9.5 -mxl-soft-mul -Wl,--no-relax -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:95:9: warning: 'return' with no value, in function returning non-void [-Wreturn-type]
+         return;
+         ^
+../src/main.c:101:13: warning: 'return' with no value, in function returning non-void [-Wreturn-type]
+             return;
+             ^
+../src/main.c:113:86: warning: assignment makes integer from pointer without a cast
+     ddr_base[(k*DISPLAY_COLUMNS*ACTUAL_ROWS)+((i-BLACK_BAR_ROWS)*DISPLAY_COLUMNS)+j] = pt;
+                                                                                      ^
+../src/main.c:125:13: warning: 'return' with no value, in function returning non-void [-Wreturn-type]
+             return;
+             ^
+../src/main.c:136:86: warning: assignment makes integer from pointer without a cast
+     ddr_base[(k*DISPLAY_COLUMNS*ACTUAL_ROWS)+((i-BLACK_BAR_ROWS)*DISPLAY_COLUMNS)+j] = pt;
+                                                                                      ^
+../src/main.c:147:13: warning: 'return' with no value, in function returning non-void [-Wreturn-type]
+             return;
+             ^
+../src/main.c:158:86: warning: assignment makes integer from pointer without a cast
+     ddr_base[(k*DISPLAY_COLUMNS*ACTUAL_ROWS)+((i-BLACK_BAR_ROWS)*DISPLAY_COLUMNS)+j] = pt;
+                                                                                      ^
+../src/main.c:169:13: warning: 'return' with no value, in function returning non-void [-Wreturn-type]
+             return;
+             ^
+../src/main.c:180:86: warning: assignment makes integer from pointer without a cast
+     ddr_base[(k*DISPLAY_COLUMNS*ACTUAL_ROWS)+((i-BLACK_BAR_ROWS)*DISPLAY_COLUMNS)+j] = pt;
+                                                                                      ^
+'Finished building: ../src/main.c'
+' '
+'Building target: hdr_fina_test.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../hdr_fina_test_bsp/microblaze_0/lib -mlittle-endian -mcpu=v9.5 -mxl-soft-mul -Wl,--no-relax -o "hdr_fina_test.elf"  ./src/diskio.o ./src/ff.o ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: hdr_fina_test.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size hdr_fina_test.elf  |tee "hdr_fina_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  56265	    424	   3935	  60624	   ecd0	hdr_fina_test.elf
+'Finished building: hdr_fina_test.elf.size'
+' '
+13:12:19 **** Incremental Build of configuration Debug for project hdr_fina_test ****
+make all 
+make: Nothing to be done for `all'.
+13:14:04 **** Auto Build of configuration Debug for project hdr_fina_test ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../hdr_fina_test_bsp/microblaze_0/include -mlittle-endian -mcpu=v9.5 -mxl-soft-mul -Wl,--no-relax -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:95:9: warning: 'return' with no value, in function returning non-void [-Wreturn-type]
+         return;
+         ^
+../src/main.c:101:13: warning: 'return' with no value, in function returning non-void [-Wreturn-type]
+             return;
+             ^
+../src/main.c:113:86: warning: assignment makes integer from pointer without a cast
+     ddr_base[(k*DISPLAY_COLUMNS*ACTUAL_ROWS)+((i-BLACK_BAR_ROWS)*DISPLAY_COLUMNS)+j] = pt;
+                                                                                      ^
+../src/main.c:125:13: warning: 'return' with no value, in function returning non-void [-Wreturn-type]
+             return;
+             ^
+../src/main.c:136:86: warning: assignment makes integer from pointer without a cast
+     ddr_base[(k*DISPLAY_COLUMNS*ACTUAL_ROWS)+((i-BLACK_BAR_ROWS)*DISPLAY_COLUMNS)+j] = pt;
+                                                                                      ^
+../src/main.c:147:13: warning: 'return' with no value, in function returning non-void [-Wreturn-type]
+             return;
+             ^
+../src/main.c:158:86: warning: assignment makes integer from pointer without a cast
+     ddr_base[(k*DISPLAY_COLUMNS*ACTUAL_ROWS)+((i-BLACK_BAR_ROWS)*DISPLAY_COLUMNS)+j] = pt;
+                                                                                      ^
+../src/main.c:169:13: warning: 'return' with no value, in function returning non-void [-Wreturn-type]
+             return;
+             ^
+../src/main.c:180:86: warning: assignment makes integer from pointer without a cast
+     ddr_base[(k*DISPLAY_COLUMNS*ACTUAL_ROWS)+((i-BLACK_BAR_ROWS)*DISPLAY_COLUMNS)+j] = pt;
+                                                                                      ^
+'Finished building: ../src/main.c'
+' '
+'Building target: hdr_fina_test.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../hdr_fina_test_bsp/microblaze_0/lib -mlittle-endian -mcpu=v9.5 -mxl-soft-mul -Wl,--no-relax -o "hdr_fina_test.elf"  ./src/diskio.o ./src/ff.o ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: hdr_fina_test.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size hdr_fina_test.elf  |tee "hdr_fina_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  56265	    424	   3935	  60624	   ecd0	hdr_fina_test.elf
+'Finished building: hdr_fina_test.elf.size'
+' '
+13:14:21 **** Auto Build of configuration Debug for project hdr_fina_test ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../hdr_fina_test_bsp/microblaze_0/include -mlittle-endian -mcpu=v9.5 -mxl-soft-mul -Wl,--no-relax -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:95:9: warning: 'return' with no value, in function returning non-void [-Wreturn-type]
+         return;
+         ^
+../src/main.c:101:13: warning: 'return' with no value, in function returning non-void [-Wreturn-type]
+             return;
+             ^
+../src/main.c:113:86: warning: assignment makes integer from pointer without a cast
+     ddr_base[(k*DISPLAY_COLUMNS*ACTUAL_ROWS)+((i-BLACK_BAR_ROWS)*DISPLAY_COLUMNS)+j] = pt;
+                                                                                      ^
+../src/main.c:125:13: warning: 'return' with no value, in function returning non-void [-Wreturn-type]
+             return;
+             ^
+../src/main.c:136:86: warning: assignment makes integer from pointer without a cast
+     ddr_base[(k*DISPLAY_COLUMNS*ACTUAL_ROWS)+((i-BLACK_BAR_ROWS)*DISPLAY_COLUMNS)+j] = pt;
+                                                                                      ^
+../src/main.c:147:13: warning: 'return' with no value, in function returning non-void [-Wreturn-type]
+             return;
+             ^
+../src/main.c:158:86: warning: assignment makes integer from pointer without a cast
+     ddr_base[(k*DISPLAY_COLUMNS*ACTUAL_ROWS)+((i-BLACK_BAR_ROWS)*DISPLAY_COLUMNS)+j] = pt;
+                                                                                      ^
+../src/main.c:169:13: warning: 'return' with no value, in function returning non-void [-Wreturn-type]
+             return;
+             ^
+../src/main.c:180:86: warning: assignment makes integer from pointer without a cast
+     ddr_base[(k*DISPLAY_COLUMNS*ACTUAL_ROWS)+((i-BLACK_BAR_ROWS)*DISPLAY_COLUMNS)+j] = pt;
+                                                                                      ^
+'Finished building: ../src/main.c'
+' '
+'Building target: hdr_fina_test.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../hdr_fina_test_bsp/microblaze_0/lib -mlittle-endian -mcpu=v9.5 -mxl-soft-mul -Wl,--no-relax -o "hdr_fina_test.elf"  ./src/diskio.o ./src/ff.o ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: hdr_fina_test.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size hdr_fina_test.elf  |tee "hdr_fina_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  56265	    424	   3935	  60624	   ecd0	hdr_fina_test.elf
+'Finished building: hdr_fina_test.elf.size'
+' '
+13:14:22 **** Incremental Build of configuration Debug for project hdr_fina_test ****
+make all 
+make: Nothing to be done for `all'.
+13:15:05 **** Auto Build of configuration Debug for project hdr_fina_test ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../hdr_fina_test_bsp/microblaze_0/include -mlittle-endian -mcpu=v9.5 -mxl-soft-mul -Wl,--no-relax -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:95:9: warning: 'return' with no value, in function returning non-void [-Wreturn-type]
+         return;
+         ^
+../src/main.c:101:13: warning: 'return' with no value, in function returning non-void [-Wreturn-type]
+             return;
+             ^
+../src/main.c:113:86: warning: assignment makes integer from pointer without a cast
+     ddr_base[(k*DISPLAY_COLUMNS*ACTUAL_ROWS)+((i-BLACK_BAR_ROWS)*DISPLAY_COLUMNS)+j] = pt;
+                                                                                      ^
+../src/main.c:125:13: warning: 'return' with no value, in function returning non-void [-Wreturn-type]
+             return;
+             ^
+../src/main.c:136:86: warning: assignment makes integer from pointer without a cast
+     ddr_base[(k*DISPLAY_COLUMNS*ACTUAL_ROWS)+((i-BLACK_BAR_ROWS)*DISPLAY_COLUMNS)+j] = pt;
+                                                                                      ^
+../src/main.c:147:13: warning: 'return' with no value, in function returning non-void [-Wreturn-type]
+             return;
+             ^
+../src/main.c:158:86: warning: assignment makes integer from pointer without a cast
+     ddr_base[(k*DISPLAY_COLUMNS*ACTUAL_ROWS)+((i-BLACK_BAR_ROWS)*DISPLAY_COLUMNS)+j] = pt;
+                                                                                      ^
+../src/main.c:169:13: warning: 'return' with no value, in function returning non-void [-Wreturn-type]
+             return;
+             ^
+../src/main.c:180:86: warning: assignment makes integer from pointer without a cast
+     ddr_base[(k*DISPLAY_COLUMNS*ACTUAL_ROWS)+((i-BLACK_BAR_ROWS)*DISPLAY_COLUMNS)+j] = pt;
+                                                                                      ^
+'Finished building: ../src/main.c'
+' '
+'Building target: hdr_fina_test.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../hdr_fina_test_bsp/microblaze_0/lib -mlittle-endian -mcpu=v9.5 -mxl-soft-mul -Wl,--no-relax -o "hdr_fina_test.elf"  ./src/diskio.o ./src/ff.o ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: hdr_fina_test.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size hdr_fina_test.elf  |tee "hdr_fina_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  56265	    424	   3935	  60624	   ecd0	hdr_fina_test.elf
+'Finished building: hdr_fina_test.elf.size'
+' '
+13:15:53 **** Incremental Build of configuration Debug for project hdr_fina_test ****
+make all 
+make: Nothing to be done for `all'.
+13:21:26 **** Incremental Build of configuration Debug for project hdr_fina_test ****
+make all 
+make: Nothing to be done for `all'.
+13:49:09 **** Incremental Build of configuration Debug for project hdr_fina_test ****
+make all 
+make: Nothing to be done for `all'.
+14:56:16 **** Incremental Build of configuration Debug for project hdr_fina_test ****
+make all 
+make: Nothing to be done for `all'.

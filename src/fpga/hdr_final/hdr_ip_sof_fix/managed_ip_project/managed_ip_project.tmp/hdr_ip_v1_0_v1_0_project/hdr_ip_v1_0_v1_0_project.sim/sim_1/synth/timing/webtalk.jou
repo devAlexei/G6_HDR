@@ -1,0 +1,10 @@
+#-----------------------------------------------------------
+# Webtalk v2015.1 (64-bit)
+# SW Build 1215546 on Mon Apr 27 19:22:08 MDT 2015
+# IP Build 1209967 on Tue Apr 21 11:39:20 MDT 2015
+# Start of session at: Tue Mar 29 21:56:59 2016
+# Process ID: 3188
+# Log file: c:/users/yli/desktop/hdr_ip/managed_ip_project/managed_ip_project.tmp/hdr_ip_v1_0_v1_0_project/hdr_ip_v1_0_v1_0_project.sim/sim_1/synth/timing/webtalk.log
+# Journal file: c:/users/yli/desktop/hdr_ip/managed_ip_project/managed_ip_project.tmp/hdr_ip_v1_0_v1_0_project/hdr_ip_v1_0_v1_0_project.sim/sim_1/synth/timing\webtalk.jou
+#-----------------------------------------------------------
+source c:/users/yli/desktop/hdr_ip/managed_ip_project/managed_ip_project.tmp/hdr_ip_v1_0_v1_0_project/hdr_ip_v1_0_v1_0_project.sim/sim_1/synth/timing/xsim.dir/tb_time_synth/webtalk/xsim_webtalk.tcl -notrace

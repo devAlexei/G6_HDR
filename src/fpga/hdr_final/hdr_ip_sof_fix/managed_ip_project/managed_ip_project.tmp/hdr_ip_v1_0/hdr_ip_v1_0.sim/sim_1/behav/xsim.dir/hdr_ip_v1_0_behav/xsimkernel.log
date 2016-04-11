@@ -1,0 +1,7 @@
+Running: xsim.dir/hdr_ip_v1_0_behav/xsimk.exe -simmode gui -wdb hdr_ip_v1_0_behav.wdb -simrunnum 0 -socket 53156
+Design successfully loaded
+Design Loading Memory Usage: 17788 KB (Peak: 17788 KB)
+Design Loading CPU Usage: 218 ms
+Simulation completed
+Simulation Memory Usage: 18644 KB (Peak: 18644 KB)
+Simulation CPU Usage: 234 ms

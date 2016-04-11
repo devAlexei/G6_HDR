@@ -1,0 +1,35 @@
+Vivado Simulator 2015.1
+Copyright 1986-1999, 2001-2015 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2015.1/bin/unwrapped/win64.o/xelab.exe -wto 67b794cd43aa4b1090112e474e5be8d5 --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L secureip --snapshot tb_func_synth xil_defaultlib.tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module unisims_ver.sffsrce_fdre
+Compiling module unisims_ver.FDRE
+Compiling module unisims_ver.LUT5
+Compiling module unisims_ver.LUT6
+Compiling module unisims_ver.x_lut3_mux4
+Compiling module unisims_ver.x_lut3_mux4_reduced_0
+Compiling module unisims_ver.LUT3
+Compiling module unisims_ver.LUT4
+Compiling module unisims_ver.x_lut2_mux4
+Compiling module unisims_ver.LUT2
+Compiling module unisims_ver.RAM128X1S
+Compiling module unisims_ver.RAM256X1S
+Compiling module unisims_ver.MUXF8
+Compiling module unisims_ver.MUXF7
+Compiling module unisims_ver.RB18_INTERNAL_VLOG(DOA_REG=0,DOB...
+Compiling module unisims_ver.RAMB18E1(READ_WIDTH_A=18,READ_WI...
+Compiling module unisims_ver.CARRY4
+Compiling module xil_defaultlib.hdr_sum
+Compiling module unisims_ver.OBUF
+Compiling module unisims_ver.IBUF
+Compiling module unisims_ver.BUFG
+Compiling module xil_defaultlib.hdr_ip_v1_0
+Compiling module xil_defaultlib.tb
+Compiling module xil_defaultlib.glbl
+Waiting for 3 sub-compilation(s) to finish...
+Built simulation snapshot tb_func_synth

@@ -1,0 +1,9 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "c:/users/yli/desktop/hdr_ip/managed_ip_project/managed_ip_project.tmp/hdr_ip_v1_0_new2/hdr_ip_v1_0_new2.sim/sim_1/synth/func/tb_func_synth.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module hdr_ip_v1_0
+INFO: [VRFC 10-311] analyzing module hdr_sum
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [VRFC 10-2263] Analyzing Verilog file "c:/users/yli/desktop/hdr_ip/managed_ip_project/managed_ip_project.tmp/hdr_ip_v1_0_new2/hdr_ip_v1_0_new2.srcs/sim_1/new/tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb
+INFO: [VRFC 10-2263] Analyzing Verilog file "c:/users/yli/desktop/hdr_ip/managed_ip_project/managed_ip_project.tmp/hdr_ip_v1_0_new2/hdr_ip_v1_0_new2.sim/sim_1/synth/func/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+WARNING: [VRFC 10-1195] overwriting previous definition of module glbl [c:/users/yli/desktop/hdr_ip/managed_ip_project/managed_ip_project.tmp/hdr_ip_v1_0_new2/hdr_ip_v1_0_new2.sim/sim_1/synth/func/glbl.v:6]

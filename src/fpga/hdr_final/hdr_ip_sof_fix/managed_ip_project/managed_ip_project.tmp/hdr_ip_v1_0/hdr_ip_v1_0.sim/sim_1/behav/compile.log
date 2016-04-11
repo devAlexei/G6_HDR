@@ -1,0 +1,8 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "c:/users/yli/desktop/hdr_ip/ip_repo/hdr_ip_1.0/hdl/hdr_ip_v1_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module hdr_ip_v1_0
+INFO: [VRFC 10-311] analyzing module hdr_sum
+INFO: [VRFC 10-311] analyzing module hdr_lut
+INFO: [VRFC 10-2263] Analyzing Verilog file "c:/users/yli/desktop/hdr_ip/managed_ip_project/managed_ip_project.tmp/hdr_ip_v1_0/hdr_ip_v1_0.srcs/sim_1/new/tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb
+INFO: [VRFC 10-2263] Analyzing Verilog file "c:/users/yli/desktop/hdr_ip/managed_ip_project/managed_ip_project.tmp/hdr_ip_v1_0/hdr_ip_v1_0.sim/sim_1/behav/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl

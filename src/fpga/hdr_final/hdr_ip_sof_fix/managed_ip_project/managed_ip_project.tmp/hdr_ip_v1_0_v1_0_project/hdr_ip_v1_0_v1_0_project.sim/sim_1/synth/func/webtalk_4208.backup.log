@@ -1,0 +1,14 @@
+INFO: [Common 17-701] A license check has taken more than 10 seconds to complete. This may indicate that there is a performance issue with one or more license servers listed in XILINXD_LICENSE_FILE or LM_LICENSE_FILE, or that the license servers are just not responding at all. Try setting the FLEXLM_DIAGNOSTICS environment variable to 3 and running Vivado again to get more information.
+#-----------------------------------------------------------
+# Webtalk v2015.1 (64-bit)
+# SW Build 1215546 on Mon Apr 27 19:22:08 MDT 2015
+# IP Build 1209967 on Tue Apr 21 11:39:20 MDT 2015
+# Start of session at: Wed Mar 30 00:52:11 2016
+# Process ID: 3500
+# Log file: c:/users/yli/desktop/hdr_ip/managed_ip_project/managed_ip_project.tmp/hdr_ip_v1_0_v1_0_project/hdr_ip_v1_0_v1_0_project.sim/sim_1/synth/func/webtalk.log
+# Journal file: c:/users/yli/desktop/hdr_ip/managed_ip_project/managed_ip_project.tmp/hdr_ip_v1_0_v1_0_project/hdr_ip_v1_0_v1_0_project.sim/sim_1/synth/func\webtalk.jou
+#-----------------------------------------------------------
+source c:/users/yli/desktop/hdr_ip/managed_ip_project/managed_ip_project.tmp/hdr_ip_v1_0_v1_0_project/hdr_ip_v1_0_v1_0_project.sim/sim_1/synth/func/xsim.dir/tb_func_synth/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-186] 'c:/users/yli/desktop/hdr_ip/managed_ip_project/managed_ip_project.tmp/hdr_ip_v1_0_v1_0_project/hdr_ip_v1_0_v1_0_project.sim/sim_1/synth/func/xsim.dir/tb_func_synth/webtalk/usage_statistics_ext_xsim.xml' has been successfully sent to Xilinx on Wed Mar 30 00:52:22 2016. For additional details about this file, please refer to the WebTalk help file at C:/Xilinx/Vivado/2015.1/doc/webtalk_introduction.html.
+webtalk_transmit: Time (s): cpu = 00:00:00 ; elapsed = 00:00:11 . Memory (MB): peak = 60.500 ; gain = 0.012
+INFO: [Common 17-206] Exiting Webtalk at Wed Mar 30 00:52:22 2016...

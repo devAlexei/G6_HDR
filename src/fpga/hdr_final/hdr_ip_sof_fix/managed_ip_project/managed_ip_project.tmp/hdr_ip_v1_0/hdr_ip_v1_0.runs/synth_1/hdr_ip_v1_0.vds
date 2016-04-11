@@ -1,0 +1,349 @@
+INFO: [Common 17-701] A license check has taken more than 10 seconds to complete. This may indicate that there is a performance issue with one or more license servers listed in XILINXD_LICENSE_FILE or LM_LICENSE_FILE, or that the license servers are just not responding at all. Try setting the FLEXLM_DIAGNOSTICS environment variable to 3 and running Vivado again to get more information.
+#-----------------------------------------------------------
+# Vivado v2015.1 (64-bit)
+# SW Build 1215546 on Mon Apr 27 19:22:08 MDT 2015
+# IP Build 1209967 on Tue Apr 21 11:39:20 MDT 2015
+# Start of session at: Tue Mar 29 18:41:05 2016
+# Process ID: 5844
+# Log file: c:/Users/yli/Desktop/hdr_ip/managed_ip_project/managed_ip_project.tmp/hdr_ip_v1_0/hdr_ip_v1_0.runs/synth_1/hdr_ip_v1_0.vds
+# Journal file: c:/Users/yli/Desktop/hdr_ip/managed_ip_project/managed_ip_project.tmp/hdr_ip_v1_0/hdr_ip_v1_0.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source hdr_ip_v1_0.tcl -notrace
+Command: synth_design -top hdr_ip_v1_0 -part xc7a100tcsg324-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Common 17-1223] The version limit for your license is '2015.12' and will expire in -89 days. A version limit expiration means that, although you may be able to continue to use the current version of tools or IP with this license, you will not be eligible for any updates or new releases.
+---------------------------------------------------------------------------------
+Starting Synthesize : Time (s): cpu = 00:00:04 ; elapsed = 00:01:13 . Memory (MB): peak = 262.590 ; gain = 86.531
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'hdr_ip_v1_0' [c:/users/yli/desktop/hdr_ip/ip_repo/hdr_ip_1.0/hdl/hdr_ip_v1_0.v:3]
+	Parameter C_S00_AXIS_TDATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_M00_AXIS_TDATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_M00_AXIS_START_COUNT bound to: 32 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'hdr_sum' [c:/users/yli/desktop/hdr_ip/ip_repo/hdr_ip_1.0/hdl/hdr_ip_v1_0.v:54]
+INFO: [Synth 8-638] synthesizing module 'hdr_lut' [c:/users/yli/desktop/hdr_ip/ip_repo/hdr_ip_1.0/hdl/hdr_ip_v1_0.v:277]
+INFO: [Synth 8-226] default block is never used [c:/users/yli/desktop/hdr_ip/ip_repo/hdr_ip_1.0/hdl/hdr_ip_v1_0.v:284]
+INFO: [Synth 8-226] default block is never used [c:/users/yli/desktop/hdr_ip/ip_repo/hdr_ip_1.0/hdl/hdr_ip_v1_0.v:545]
+INFO: [Synth 8-226] default block is never used [c:/users/yli/desktop/hdr_ip/ip_repo/hdr_ip_1.0/hdl/hdr_ip_v1_0.v:806]
+INFO: [Synth 8-256] done synthesizing module 'hdr_lut' (1#1) [c:/users/yli/desktop/hdr_ip/ip_repo/hdr_ip_1.0/hdl/hdr_ip_v1_0.v:277]
+INFO: [Synth 8-256] done synthesizing module 'hdr_sum' (2#1) [c:/users/yli/desktop/hdr_ip/ip_repo/hdr_ip_1.0/hdl/hdr_ip_v1_0.v:54]
+INFO: [Synth 8-256] done synthesizing module 'hdr_ip_v1_0' (3#1) [c:/users/yli/desktop/hdr_ip/ip_repo/hdr_ip_1.0/hdl/hdr_ip_v1_0.v:3]
+WARNING: [Synth 8-3917] design hdr_ip_v1_0 has port m00_axis_tdata[7] driven by constant 0
+WARNING: [Synth 8-3917] design hdr_ip_v1_0 has port m00_axis_tdata[6] driven by constant 0
+WARNING: [Synth 8-3917] design hdr_ip_v1_0 has port m00_axis_tdata[5] driven by constant 0
+WARNING: [Synth 8-3917] design hdr_ip_v1_0 has port m00_axis_tdata[4] driven by constant 0
+WARNING: [Synth 8-3917] design hdr_ip_v1_0 has port m00_axis_tdata[3] driven by constant 0
+WARNING: [Synth 8-3917] design hdr_ip_v1_0 has port m00_axis_tdata[2] driven by constant 0
+WARNING: [Synth 8-3917] design hdr_ip_v1_0 has port m00_axis_tdata[1] driven by constant 0
+WARNING: [Synth 8-3917] design hdr_ip_v1_0 has port m00_axis_tdata[0] driven by constant 0
+WARNING: [Synth 8-3331] design hdr_ip_v1_0 has unconnected port m00_axis_aclk
+WARNING: [Synth 8-3331] design hdr_ip_v1_0 has unconnected port m00_axis_aresetn
+---------------------------------------------------------------------------------
+Finished Synthesize : Time (s): cpu = 00:00:05 ; elapsed = 00:01:14 . Memory (MB): peak = 297.805 ; gain = 121.746
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:05 ; elapsed = 00:01:14 . Memory (MB): peak = 297.805 ; gain = 121.746
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a100tcsg324-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:05 ; elapsed = 00:01:14 . Memory (MB): peak = 297.805 ; gain = 121.746
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7a100tcsg324-1
+INFO: [Synth 8-5546] ROM "hdr_last" won't be mapped to RAM because it is too sparse
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:06 ; elapsed = 00:01:14 . Memory (MB): peak = 338.793 ; gain = 162.734
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+No constraint files found.
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     10 Bit       Adders := 2     
+	   4 Input      8 Bit       Adders := 3     
+	   2 Input      2 Bit       Adders := 1     
++---Registers : 
+	               10 Bit    Registers := 1     
+	                8 Bit    Registers := 3     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 3     
++---RAMs : 
+	               5K Bit         RAMs := 12    
++---Muxes : 
+	   2 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 12    
+	   4 Input      1 Bit        Muxes := 6     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module hdr_sum 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     10 Bit       Adders := 2     
+	   4 Input      8 Bit       Adders := 3     
+	   2 Input      2 Bit       Adders := 1     
++---Registers : 
+	               10 Bit    Registers := 1     
+	                8 Bit    Registers := 3     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 3     
++---RAMs : 
+	               5K Bit         RAMs := 12    
++---Muxes : 
+	   2 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 12    
+	   4 Input      1 Bit        Muxes := 6     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 240 (col length:80)
+BRAMs: 270 (col length: RAMB18 80 RAMB36 40)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+Start Parallel Synthesis Optimization  : Time (s): cpu = 00:00:08 ; elapsed = 00:01:17 . Memory (MB): peak = 440.723 ; gain = 264.664
+---------------------------------------------------------------------------------
+Start Cross Boundary Optimization
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5546] ROM "hdr0/hdr_last" won't be mapped to RAM because it is too sparse
+WARNING: [Synth 8-3917] design hdr_ip_v1_0 has port m00_axis_tdata[7] driven by constant 0
+WARNING: [Synth 8-3917] design hdr_ip_v1_0 has port m00_axis_tdata[6] driven by constant 0
+WARNING: [Synth 8-3917] design hdr_ip_v1_0 has port m00_axis_tdata[5] driven by constant 0
+WARNING: [Synth 8-3917] design hdr_ip_v1_0 has port m00_axis_tdata[4] driven by constant 0
+WARNING: [Synth 8-3917] design hdr_ip_v1_0 has port m00_axis_tdata[3] driven by constant 0
+WARNING: [Synth 8-3917] design hdr_ip_v1_0 has port m00_axis_tdata[2] driven by constant 0
+WARNING: [Synth 8-3917] design hdr_ip_v1_0 has port m00_axis_tdata[1] driven by constant 0
+WARNING: [Synth 8-3917] design hdr_ip_v1_0 has port m00_axis_tdata[0] driven by constant 0
+WARNING: [Synth 8-3331] design hdr_ip_v1_0 has unconnected port s00_axis_tdata[7]
+WARNING: [Synth 8-3331] design hdr_ip_v1_0 has unconnected port s00_axis_tdata[6]
+WARNING: [Synth 8-3331] design hdr_ip_v1_0 has unconnected port s00_axis_tdata[5]
+WARNING: [Synth 8-3331] design hdr_ip_v1_0 has unconnected port s00_axis_tdata[4]
+WARNING: [Synth 8-3331] design hdr_ip_v1_0 has unconnected port s00_axis_tdata[3]
+WARNING: [Synth 8-3331] design hdr_ip_v1_0 has unconnected port s00_axis_tdata[2]
+WARNING: [Synth 8-3331] design hdr_ip_v1_0 has unconnected port s00_axis_tdata[1]
+WARNING: [Synth 8-3331] design hdr_ip_v1_0 has unconnected port s00_axis_tdata[0]
+WARNING: [Synth 8-3331] design hdr_ip_v1_0 has unconnected port m00_axis_aclk
+WARNING: [Synth 8-3331] design hdr_ip_v1_0 has unconnected port m00_axis_aresetn
+---------------------------------------------------------------------------------
+Finished Cross Boundary Optimization : Time (s): cpu = 00:00:09 ; elapsed = 00:01:18 . Memory (MB): peak = 482.285 ; gain = 306.227
+---------------------------------------------------------------------------------
+Finished Parallel Reinference  : Time (s): cpu = 00:00:09 ; elapsed = 00:01:18 . Memory (MB): peak = 482.285 ; gain = 306.227
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+Optimized 2 bits of RAM "hdr0/sum_red_reg" due to constant propagation. Old ram width 8 bits, new ram width 6 bits
+Optimized 2 bits of RAM "hdr0/sum_green_reg" due to constant propagation. Old ram width 8 bits, new ram width 6 bits
+Optimized 2 bits of RAM "hdr0/sum_blue_reg" due to constant propagation. Old ram width 8 bits, new ram width 6 bits
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+ROM:
++------------+------------+---------------+----------------+
+|Module Name | RTL Object | Depth x Width | Implemented As | 
++------------+------------+---------------+----------------+
+|hdr_lut     | rom        | 256x8         | LUT            | 
+|hdr_lut     | rom__1     | 256x8         | LUT            | 
+|hdr_lut     | rom__2     | 256x8         | LUT            | 
+|hdr_ip_v1_0 | rom        | 256x8         | LUT            | 
+|hdr_ip_v1_0 | rom__3     | 256x8         | LUT            | 
+|hdr_ip_v1_0 | rom__4     | 256x8         | LUT            | 
++------------+------------+---------------+----------------+
+
+
+Block RAM:
++------------+--------------------+------------------------+---+---+------------------------+---+---+--------------+--------+--------+------------------------+
+|Module Name | RTL Object         | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | OUT_REG      | RAMB18 | RAMB36 | Hierarchical Name      | 
++------------+--------------------+------------------------+---+---+------------------------+---+---+--------------+--------+--------+------------------------+
+|hdr_ip_v1_0 | hdr0/sum_red_reg   | 1 K x 8(READ_FIRST)    | W |   | 1 K x 8(WRITE_FIRST)   |   | R | Port A and B | 1      | 0      | hdr_ip_v1_0/extram__16 | 
+|hdr_ip_v1_0 | hdr0/sum_green_reg | 1 K x 8(READ_FIRST)    | W |   | 1 K x 8(WRITE_FIRST)   |   | R | Port A and B | 1      | 0      | hdr_ip_v1_0/extram__21 | 
+|hdr_ip_v1_0 | hdr0/sum_blue_reg  | 1 K x 8(READ_FIRST)    | W |   | 1 K x 8(WRITE_FIRST)   |   | R | Port A and B | 1      | 0      | hdr_ip_v1_0/extram__26 | 
++------------+--------------------+------------------------+---+---+------------------------+---+---+--------------+--------+--------+------------------------+
+
+Note: The table shows the Block RAMs at the current stage of the synthesis flow. Some Block RAMs may be reimplemented as non Block RAM primitives later in the synthesis flow. Multiple instantiated Block RAMs are reported only once. "Hierarchical Name" reflects the Block RAM name as it appears in the hierarchical module and only part of it is displayed.
+Distributed RAM: 
++------------+---------------------+-----------+----------------------+---------------------------------+---------------------+
+|Module Name | RTL Object          | Inference | Size (Depth x Width) | Primitives                      | Hierarchical Name   | 
++------------+---------------------+-----------+----------------------+---------------------------------+---------------------+
+|hdr_ip_v1_0 | hdr0/img1_red_reg   | Implied   | 1 K x 8              | RAM128X1S x 8  RAM256X1S x 16   | hdr_ip_v1_0/ram__9  | 
+|hdr_ip_v1_0 | hdr0/img2_red_reg   | Implied   | 1 K x 8              | RAM128X1S x 8  RAM256X1S x 16   | hdr_ip_v1_0/ram__10 | 
+|hdr_ip_v1_0 | hdr0/img3_red_reg   | Implied   | 1 K x 8              | RAM128X1S x 8  RAM256X1S x 16   | hdr_ip_v1_0/ram__11 | 
+|hdr_ip_v1_0 | hdr0/img1_green_reg | Implied   | 1 K x 8              | RAM128X1S x 8  RAM256X1S x 16   | hdr_ip_v1_0/ram__12 | 
+|hdr_ip_v1_0 | hdr0/img2_green_reg | Implied   | 1 K x 8              | RAM128X1S x 8  RAM256X1S x 16   | hdr_ip_v1_0/ram__13 | 
+|hdr_ip_v1_0 | hdr0/img3_green_reg | Implied   | 1 K x 8              | RAM128X1S x 8  RAM256X1S x 16   | hdr_ip_v1_0/ram__14 | 
+|hdr_ip_v1_0 | hdr0/img1_blue_reg  | Implied   | 1 K x 8              | RAM128X1S x 8  RAM256X1S x 16   | hdr_ip_v1_0/ram__15 | 
+|hdr_ip_v1_0 | hdr0/img2_blue_reg  | Implied   | 1 K x 8              | RAM128X1S x 8  RAM256X1S x 16   | hdr_ip_v1_0/ram__16 | 
+|hdr_ip_v1_0 | hdr0/img3_blue_reg  | Implied   | 1 K x 8              | RAM128X1S x 8  RAM256X1S x 16   | hdr_ip_v1_0/ram__17 | 
++------------+---------------------+-----------+----------------------+---------------------------------+---------------------+
+
+Note: The table shows the Distributed RAMs at the current stage of the synthesis flow. Some Distributed RAMs may be reimplemented as non Distributed RAM primitives later in the synthesis flow. Multiple instantiated RAMs are reported only once. "Hierarchical Name" reflects the Distributed RAM name as it appears in the hierarchical module and only part of it is displayed.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Area Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Area Optimization : Time (s): cpu = 00:00:11 ; elapsed = 00:01:19 . Memory (MB): peak = 482.285 ; gain = 306.227
+---------------------------------------------------------------------------------
+Finished Parallel Area Optimization  : Time (s): cpu = 00:00:11 ; elapsed = 00:01:19 . Memory (MB): peak = 482.285 ; gain = 306.227
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+Finished Parallel Synthesis Optimization  : Time (s): cpu = 00:00:11 ; elapsed = 00:01:19 . Memory (MB): peak = 482.285 ; gain = 306.227
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:11 ; elapsed = 00:01:19 . Memory (MB): peak = 482.285 ; gain = 306.227
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+INFO: [Synth 8-4480] The timing for the instance \hdr0/sum_red_reg  (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance \hdr0/sum_green_reg  (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance \hdr0/sum_blue_reg  (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:11 ; elapsed = 00:01:20 . Memory (MB): peak = 482.285 ; gain = 306.227
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:11 ; elapsed = 00:01:20 . Memory (MB): peak = 482.285 ; gain = 306.227
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:11 ; elapsed = 00:01:20 . Memory (MB): peak = 482.285 ; gain = 306.227
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:11 ; elapsed = 00:01:20 . Memory (MB): peak = 482.285 ; gain = 306.227
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports : Time (s): cpu = 00:00:11 ; elapsed = 00:01:20 . Memory (MB): peak = 482.285 ; gain = 306.227
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:11 ; elapsed = 00:01:20 . Memory (MB): peak = 482.285 ; gain = 306.227
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+----------+------+
+|      |Cell      |Count |
++------+----------+------+
+|1     |BUFG      |     1|
+|2     |CARRY4    |     6|
+|3     |LUT2      |     8|
+|4     |LUT3      |    24|
+|5     |LUT4      |    25|
+|6     |LUT5      |    75|
+|7     |LUT6      |   175|
+|8     |MUXF7     |    14|
+|9     |MUXF8     |     7|
+|10    |RAM128X1S |    72|
+|11    |RAM256X1S |   144|
+|12    |RAMB18E1  |     3|
+|13    |FDRE      |    95|
+|14    |IBUF      |    29|
+|15    |OBUF      |    35|
++------+----------+------+
+
+Report Instance Areas: 
++------+---------+--------+------+
+|      |Instance |Module  |Cells |
++------+---------+--------+------+
+|1     |top      |        |   713|
+|2     |  hdr0   |hdr_sum |   648|
++------+---------+--------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:11 ; elapsed = 00:01:20 . Memory (MB): peak = 482.285 ; gain = 306.227
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 28 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 482.285 ; gain = 270.594
+Synthesis Optimization Complete : Time (s): cpu = 00:00:11 ; elapsed = 00:01:20 . Memory (MB): peak = 482.285 ; gain = 306.227
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 254 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 216 instances were transformed.
+  RAM128X1S => RAM128X1S (MUXF7, RAMS64E, RAMS64E): 72 instances
+  RAM256X1S => RAM256X1S (MUXF7, MUXF7, MUXF8, RAMS64E, RAMS64E, RAMS64E, RAMS64E): 144 instances
+
+INFO: [Common 17-83] Releasing license: Synthesis
+24 Infos, 28 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:10 ; elapsed = 00:01:31 . Memory (MB): peak = 523.855 ; gain = 315.453
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.078 . Memory (MB): peak = 523.855 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Tue Mar 29 18:42:39 2016...

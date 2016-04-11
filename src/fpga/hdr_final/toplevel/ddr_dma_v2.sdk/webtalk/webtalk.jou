@@ -1,0 +1,10 @@
+#-----------------------------------------------------------
+# Webtalk v2015.1 (64-bit)
+# SW Build 1215546 on Mon Apr 27 19:37:43 MDT 2015
+# 
+# Start of session at: Mon Apr 04 13:07:26 2016
+# Process ID: 3140
+# Log file: C:/Users/yli/Desktop/hdr_complete_final_test/test/temp/ddr_dma_v2.sdk/webtalk/webtalk.log
+# Journal file: C:/Users/yli/Desktop/hdr_complete_final_test/test/temp/ddr_dma_v2.sdk/webtalk\webtalk.jou
+#-----------------------------------------------------------
+source sdk_webtalk.tcl

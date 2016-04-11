@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Webtalk v2015.1 (64-bit)
+# SW Build 1215546 on Mon Apr 27 19:22:08 MDT 2015
+# IP Build 1209967 on Tue Apr 21 11:39:20 MDT 2015
+# Start of session at: Wed Mar 30 14:11:08 2016
+# Process ID: 3708
+# Log file: c:/users/yli/desktop/hdr_ip/managed_ip_project/managed_ip_project.tmp/hdr_ip_v1_0_byte_fix/hdr_ip_v1_0_byte_fix.sim/sim_1/behav/webtalk.log
+# Journal file: c:/users/yli/desktop/hdr_ip/managed_ip_project/managed_ip_project.tmp/hdr_ip_v1_0_byte_fix/hdr_ip_v1_0_byte_fix.sim/sim_1/behav\webtalk.jou
+#-----------------------------------------------------------
+source c:/users/yli/desktop/hdr_ip/managed_ip_project/managed_ip_project.tmp/hdr_ip_v1_0_byte_fix/hdr_ip_v1_0_byte_fix.sim/sim_1/behav/xsim.dir/tb_behav/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-186] 'c:/users/yli/desktop/hdr_ip/managed_ip_project/managed_ip_project.tmp/hdr_ip_v1_0_byte_fix/hdr_ip_v1_0_byte_fix.sim/sim_1/behav/xsim.dir/tb_behav/webtalk/usage_statistics_ext_xsim.xml' has been successfully sent to Xilinx on Wed Mar 30 14:11:13 2016. For additional details about this file, please refer to the WebTalk help file at C:/Xilinx/Vivado/2015.1/doc/webtalk_introduction.html.
+INFO: [Common 17-206] Exiting Webtalk at Wed Mar 30 14:11:13 2016...

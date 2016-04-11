@@ -1,0 +1,9 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/yli/Desktop/edge_new/edge_new/edge_new.sim/sim_1/synth/func/tb_func_synth.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module edge_detect
+INFO: [VRFC 10-311] analyzing module sobel_edge_detect
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/yli/Desktop/edge_new/edge_new/edge_new.srcs/sim_1/new/tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/yli/Desktop/edge_new/edge_new/edge_new.sim/sim_1/synth/func/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+WARNING: [VRFC 10-1195] overwriting previous definition of module glbl [C:/Users/yli/Desktop/edge_new/edge_new/edge_new.sim/sim_1/synth/func/glbl.v:6]

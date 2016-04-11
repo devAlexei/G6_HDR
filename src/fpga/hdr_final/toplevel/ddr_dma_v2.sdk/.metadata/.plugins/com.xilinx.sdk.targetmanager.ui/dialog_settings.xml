@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<item value="ddr_dma_v2_wrapper.mmi" key="ddr_dma_v2_wrapper_hw_platform_0-bmmFile"/>
+	<item value="ddr_dma_v2_wrapper_hw_platform_0" key="programfpga.hwplatform"/>
+	<item value="ddr_dma_v2_wrapper.bit" key="ddr_dma_v2_wrapper_hw_platform_0-bitFile"/>
+	<item value="Local" key="ddr_dma_v2_wrapper_hw_platform_0-target"/>
+	<item value="Auto Detect" key="ddr_dma_v2_wrapper_hw_platform_0-device"/>
+	<item value="bootloop" key="ddr_dma_v2_wrapper_hw_platform_0-ddr_dma_v2_i/microblaze_0-initElf"/>
+</section>

@@ -1,0 +1,10 @@
+#-----------------------------------------------------------
+# Vivado v2015.1 (64-bit)
+# SW Build 1215546 on Mon Apr 27 19:22:08 MDT 2015
+# IP Build 1209967 on Tue Apr 21 11:39:20 MDT 2015
+# Start of session at: Mon Apr 04 00:10:29 2016
+# Process ID: 3004
+# Log file: C:/Users/yli/Desktop/edge_new/edge_new/edge_new.runs/synth_1/edge_detect.vds
+# Journal file: C:/Users/yli/Desktop/edge_new/edge_new/edge_new.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source edge_detect.tcl -notrace

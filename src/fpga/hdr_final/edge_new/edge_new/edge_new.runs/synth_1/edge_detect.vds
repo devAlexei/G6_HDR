@@ -1,0 +1,604 @@
+#-----------------------------------------------------------
+# Vivado v2015.1 (64-bit)
+# SW Build 1215546 on Mon Apr 27 19:22:08 MDT 2015
+# IP Build 1209967 on Tue Apr 21 11:39:20 MDT 2015
+# Start of session at: Mon Apr 04 00:10:29 2016
+# Process ID: 3004
+# Log file: C:/Users/yli/Desktop/edge_new/edge_new/edge_new.runs/synth_1/edge_detect.vds
+# Journal file: C:/Users/yli/Desktop/edge_new/edge_new/edge_new.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source edge_detect.tcl -notrace
+Command: synth_design -top edge_detect -part xc7a100tcsg324-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Common 17-1223] The version limit for your license is '2015.12' and will expire in -94 days. A version limit expiration means that, although you may be able to continue to use the current version of tools or IP with this license, you will not be eligible for any updates or new releases.
+---------------------------------------------------------------------------------
+Starting Synthesize : Time (s): cpu = 00:00:03 ; elapsed = 00:00:06 . Memory (MB): peak = 262.969 ; gain = 86.988
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'edge_detect' [C:/Users/yli/Desktop/edge_new/edge_new/edge_new.srcs/sources_1/new/edge_new.v:23]
+INFO: [Synth 8-5534] Detected attribute (* ram_style = "distributed" *) [C:/Users/yli/Desktop/edge_new/edge_new/edge_new.srcs/sources_1/new/edge_new.v:54]
+INFO: [Synth 8-5534] Detected attribute (* ram_style = "distributed" *) [C:/Users/yli/Desktop/edge_new/edge_new/edge_new.srcs/sources_1/new/edge_new.v:55]
+INFO: [Synth 8-5534] Detected attribute (* ram_style = "distributed" *) [C:/Users/yli/Desktop/edge_new/edge_new/edge_new.srcs/sources_1/new/edge_new.v:56]
+INFO: [Synth 8-5534] Detected attribute (* ram_style = "distributed" *) [C:/Users/yli/Desktop/edge_new/edge_new/edge_new.srcs/sources_1/new/edge_new.v:58]
+INFO: [Synth 8-638] synthesizing module 'sobel_edge_detect' [C:/Users/yli/Desktop/edge_new/edge_new/edge_new.srcs/sources_1/new/edge_new.v:367]
+INFO: [Synth 8-5534] Detected attribute (* dont_touch = "true" *) [C:/Users/yli/Desktop/edge_new/edge_new/edge_new.srcs/sources_1/new/edge_new.v:414]
+INFO: [Synth 8-5534] Detected attribute (* dont_touch = "true" *) [C:/Users/yli/Desktop/edge_new/edge_new/edge_new.srcs/sources_1/new/edge_new.v:415]
+INFO: [Synth 8-5534] Detected attribute (* dont_touch = "true" *) [C:/Users/yli/Desktop/edge_new/edge_new/edge_new.srcs/sources_1/new/edge_new.v:416]
+INFO: [Synth 8-5534] Detected attribute (* dont_touch = "true" *) [C:/Users/yli/Desktop/edge_new/edge_new/edge_new.srcs/sources_1/new/edge_new.v:417]
+INFO: [Synth 8-5534] Detected attribute (* dont_touch = "true" *) [C:/Users/yli/Desktop/edge_new/edge_new/edge_new.srcs/sources_1/new/edge_new.v:398]
+INFO: [Synth 8-256] done synthesizing module 'sobel_edge_detect' (1#1) [C:/Users/yli/Desktop/edge_new/edge_new/edge_new.srcs/sources_1/new/edge_new.v:367]
+INFO: [Synth 8-256] done synthesizing module 'edge_detect' (2#1) [C:/Users/yli/Desktop/edge_new/edge_new/edge_new.srcs/sources_1/new/edge_new.v:23]
+WARNING: [Synth 8-3917] design edge_detect has port out_data[23] driven by constant 0
+WARNING: [Synth 8-3917] design edge_detect has port out_data[22] driven by constant 0
+WARNING: [Synth 8-3917] design edge_detect has port out_data[21] driven by constant 0
+WARNING: [Synth 8-3917] design edge_detect has port out_data[20] driven by constant 0
+WARNING: [Synth 8-3917] design edge_detect has port out_data[19] driven by constant 0
+WARNING: [Synth 8-3917] design edge_detect has port out_data[18] driven by constant 0
+WARNING: [Synth 8-3917] design edge_detect has port out_data[17] driven by constant 0
+WARNING: [Synth 8-3917] design edge_detect has port out_data[16] driven by constant 0
+WARNING: [Synth 8-3917] design edge_detect has port out_data[15] driven by constant 0
+WARNING: [Synth 8-3917] design edge_detect has port out_data[14] driven by constant 0
+WARNING: [Synth 8-3917] design edge_detect has port out_data[13] driven by constant 0
+WARNING: [Synth 8-3917] design edge_detect has port out_data[12] driven by constant 0
+WARNING: [Synth 8-3917] design edge_detect has port out_data[11] driven by constant 0
+WARNING: [Synth 8-3917] design edge_detect has port out_data[10] driven by constant 0
+WARNING: [Synth 8-3917] design edge_detect has port out_data[9] driven by constant 0
+WARNING: [Synth 8-3917] design edge_detect has port out_data[8] driven by constant 0
+WARNING: [Synth 8-3331] design edge_detect has unconnected port in_data[23]
+WARNING: [Synth 8-3331] design edge_detect has unconnected port in_data[22]
+WARNING: [Synth 8-3331] design edge_detect has unconnected port in_data[21]
+WARNING: [Synth 8-3331] design edge_detect has unconnected port in_data[20]
+WARNING: [Synth 8-3331] design edge_detect has unconnected port in_data[19]
+WARNING: [Synth 8-3331] design edge_detect has unconnected port in_data[18]
+WARNING: [Synth 8-3331] design edge_detect has unconnected port in_data[17]
+WARNING: [Synth 8-3331] design edge_detect has unconnected port in_data[16]
+WARNING: [Synth 8-3331] design edge_detect has unconnected port in_data[15]
+WARNING: [Synth 8-3331] design edge_detect has unconnected port in_data[14]
+WARNING: [Synth 8-3331] design edge_detect has unconnected port in_data[13]
+WARNING: [Synth 8-3331] design edge_detect has unconnected port in_data[12]
+WARNING: [Synth 8-3331] design edge_detect has unconnected port in_data[11]
+WARNING: [Synth 8-3331] design edge_detect has unconnected port in_data[10]
+WARNING: [Synth 8-3331] design edge_detect has unconnected port in_data[9]
+WARNING: [Synth 8-3331] design edge_detect has unconnected port in_data[8]
+WARNING: [Synth 8-3331] design edge_detect has unconnected port in_sof
+---------------------------------------------------------------------------------
+Finished Synthesize : Time (s): cpu = 00:00:05 ; elapsed = 00:00:08 . Memory (MB): peak = 315.727 ; gain = 139.746
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:05 ; elapsed = 00:00:08 . Memory (MB): peak = 315.727 ; gain = 139.746
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a100tcsg324-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:05 ; elapsed = 00:00:08 . Memory (MB): peak = 315.727 ; gain = 139.746
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7a100tcsg324-1
+INFO: [Synth 8-4471] merging register 'valid_out_reg' into 'strobe_out_reg' [C:/Users/yli/Desktop/edge_new/edge_new/edge_new.srcs/sources_1/new/edge_new.v:425]
+INFO: [Synth 8-3537] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the inputs of the operator [C:/Users/yli/Desktop/edge_new/edge_new/edge_new.srcs/sources_1/new/edge_new.v:445]
+INFO: [Synth 8-3537] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the inputs of the operator [C:/Users/yli/Desktop/edge_new/edge_new/edge_new.srcs/sources_1/new/edge_new.v:445]
+INFO: [Synth 8-3537] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the inputs of the operator [C:/Users/yli/Desktop/edge_new/edge_new/edge_new.srcs/sources_1/new/edge_new.v:445]
+INFO: [Synth 8-41] '+' operator could not be merged with '+' operator due to loss of accuracy [C:/Users/yli/Desktop/edge_new/edge_new/edge_new.srcs/sources_1/new/edge_new.v:464]
+INFO: [Synth 8-41] '+' operator could not be merged with '+' operator due to loss of accuracy [C:/Users/yli/Desktop/edge_new/edge_new/edge_new.srcs/sources_1/new/edge_new.v:464]
+INFO: [Synth 8-41] '+' operator could not be merged with '+' operator due to loss of accuracy [C:/Users/yli/Desktop/edge_new/edge_new/edge_new.srcs/sources_1/new/edge_new.v:464]
+INFO: [Synth 8-802] inferred FSM for state register 'count_reg' in module 'sobel_edge_detect'
+INFO: [Synth 8-4471] merging register 'sobel_start_reg' into 'sobel_valid_reg' [C:/Users/yli/Desktop/edge_new/edge_new/edge_new.srcs/sources_1/new/edge_new.v:204]
+INFO: [Synth 8-5545] ROM "sobel_bufout_reg[639]" won't be mapped to RAM because address size (32) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "sobel_bufout_reg[638]" won't be mapped to RAM because address size (32) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "sobel_bufout_reg[637]" won't be mapped to RAM because address size (32) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "sobel_bufout_reg[636]" won't be mapped to RAM because address size (32) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "sobel_bufout_reg[635]" won't be mapped to RAM because address size (32) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "sobel_bufout_reg[634]" won't be mapped to RAM because address size (32) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "sobel_bufout_reg[633]" won't be mapped to RAM because address size (32) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "sobel_bufout_reg[632]" won't be mapped to RAM because address size (32) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "sobel_bufout_reg[631]" won't be mapped to RAM because address size (32) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "sobel_bufout_reg[630]" won't be mapped to RAM because address size (32) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "sobel_bufout_reg[629]" won't be mapped to RAM because address size (32) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "sobel_bufout_reg[628]" won't be mapped to RAM because address size (32) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "sobel_bufout_reg[627]" won't be mapped to RAM because address size (32) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "sobel_bufout_reg[626]" won't be mapped to RAM because address size (32) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "sobel_bufout_reg[625]" won't be mapped to RAM because address size (32) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "sobel_bufout_reg[624]" won't be mapped to RAM because address size (32) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "sobel_bufout_reg[623]" won't be mapped to RAM because address size (32) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "sobel_bufout_reg[622]" won't be mapped to RAM because address size (32) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "sobel_bufout_reg[621]" won't be mapped to RAM because address size (32) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "sobel_bufout_reg[620]" won't be mapped to RAM because address size (32) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "sobel_bufout_reg[619]" won't be mapped to RAM because address size (32) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "sobel_bufout_reg[618]" won't be mapped to RAM because address size (32) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "sobel_bufout_reg[617]" won't be mapped to RAM because address size (32) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "sobel_bufout_reg[616]" won't be mapped to RAM because address size (32) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "sobel_bufout_reg[615]" won't be mapped to RAM because address size (32) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "sobel_bufout_reg[614]" won't be mapped to RAM because address size (32) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "sobel_bufout_reg[613]" won't be mapped to RAM because address size (32) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "sobel_bufout_reg[612]" won't be mapped to RAM because address size (32) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "sobel_bufout_reg[611]" won't be mapped to RAM because address size (32) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "sobel_bufout_reg[610]" won't be mapped to RAM because address size (32) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "sobel_bufout_reg[609]" won't be mapped to RAM because address size (32) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "sobel_bufout_reg[608]" won't be mapped to RAM because address size (32) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "sobel_bufout_reg[607]" won't be mapped to RAM because address size (32) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "sobel_bufout_reg[606]" won't be mapped to RAM because address size (32) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "sobel_bufout_reg[605]" won't be mapped to RAM because address size (32) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "sobel_bufout_reg[604]" won't be mapped to RAM because address size (32) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "sobel_bufout_reg[603]" won't be mapped to RAM because address size (32) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "sobel_bufout_reg[602]" won't be mapped to RAM because address size (32) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "sobel_bufout_reg[601]" won't be mapped to RAM because address size (32) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "sobel_bufout_reg[600]" won't be mapped to RAM because address size (32) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "sobel_bufout_reg[599]" won't be mapped to RAM because address size (32) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "sobel_bufout_reg[598]" won't be mapped to RAM because address size (32) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "sobel_bufout_reg[597]" won't be mapped to RAM because address size (32) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "sobel_bufout_reg[596]" won't be mapped to RAM because address size (32) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "sobel_bufout_reg[595]" won't be mapped to RAM because address size (32) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "sobel_bufout_reg[594]" won't be mapped to RAM because address size (32) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "sobel_bufout_reg[593]" won't be mapped to RAM because address size (32) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "sobel_bufout_reg[592]" won't be mapped to RAM because address size (32) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "sobel_bufout_reg[591]" won't be mapped to RAM because address size (32) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "sobel_bufout_reg[590]" won't be mapped to RAM because address size (32) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "sobel_bufout_reg[589]" won't be mapped to RAM because address size (32) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "sobel_bufout_reg[588]" won't be mapped to RAM because address size (32) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "sobel_bufout_reg[587]" won't be mapped to RAM because address size (32) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "sobel_bufout_reg[586]" won't be mapped to RAM because address size (32) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "sobel_bufout_reg[585]" won't be mapped to RAM because address size (32) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "sobel_bufout_reg[584]" won't be mapped to RAM because address size (32) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "sobel_bufout_reg[583]" won't be mapped to RAM because address size (32) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "sobel_bufout_reg[582]" won't be mapped to RAM because address size (32) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "sobel_bufout_reg[581]" won't be mapped to RAM because address size (32) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "sobel_bufout_reg[580]" won't be mapped to RAM because address size (32) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "sobel_bufout_reg[579]" won't be mapped to RAM because address size (32) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "sobel_bufout_reg[578]" won't be mapped to RAM because address size (32) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "sobel_bufout_reg[577]" won't be mapped to RAM because address size (32) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "sobel_bufout_reg[576]" won't be mapped to RAM because address size (32) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "sobel_bufout_reg[575]" won't be mapped to RAM because address size (32) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "sobel_bufout_reg[574]" won't be mapped to RAM because address size (32) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "sobel_bufout_reg[573]" won't be mapped to RAM because address size (32) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "sobel_bufout_reg[572]" won't be mapped to RAM because address size (32) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "sobel_bufout_reg[571]" won't be mapped to RAM because address size (32) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "sobel_bufout_reg[570]" won't be mapped to RAM because address size (32) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "sobel_bufout_reg[569]" won't be mapped to RAM because address size (32) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "sobel_bufout_reg[568]" won't be mapped to RAM because address size (32) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "sobel_bufout_reg[567]" won't be mapped to RAM because address size (32) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "sobel_bufout_reg[566]" won't be mapped to RAM because address size (32) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "sobel_bufout_reg[565]" won't be mapped to RAM because address size (32) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "sobel_bufout_reg[564]" won't be mapped to RAM because address size (32) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "sobel_bufout_reg[563]" won't be mapped to RAM because address size (32) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "sobel_bufout_reg[562]" won't be mapped to RAM because address size (32) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "sobel_bufout_reg[561]" won't be mapped to RAM because address size (32) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "sobel_bufout_reg[560]" won't be mapped to RAM because address size (32) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "sobel_bufout_reg[559]" won't be mapped to RAM because address size (32) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "sobel_bufout_reg[558]" won't be mapped to RAM because address size (32) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "sobel_bufout_reg[557]" won't be mapped to RAM because address size (32) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "sobel_bufout_reg[556]" won't be mapped to RAM because address size (32) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "sobel_bufout_reg[555]" won't be mapped to RAM because address size (32) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "sobel_bufout_reg[554]" won't be mapped to RAM because address size (32) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "sobel_bufout_reg[553]" won't be mapped to RAM because address size (32) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "sobel_bufout_reg[552]" won't be mapped to RAM because address size (32) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "sobel_bufout_reg[551]" won't be mapped to RAM because address size (32) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "sobel_bufout_reg[550]" won't be mapped to RAM because address size (32) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "sobel_bufout_reg[549]" won't be mapped to RAM because address size (32) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "sobel_bufout_reg[548]" won't be mapped to RAM because address size (32) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "sobel_bufout_reg[547]" won't be mapped to RAM because address size (32) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "sobel_bufout_reg[546]" won't be mapped to RAM because address size (32) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "sobel_bufout_reg[545]" won't be mapped to RAM because address size (32) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "sobel_bufout_reg[544]" won't be mapped to RAM because address size (32) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "sobel_bufout_reg[543]" won't be mapped to RAM because address size (32) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "sobel_bufout_reg[542]" won't be mapped to RAM because address size (32) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "sobel_bufout_reg[541]" won't be mapped to RAM because address size (32) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "sobel_bufout_reg[540]" won't be mapped to RAM because address size (32) is larger than maximum supported(18)
+INFO: [Common 17-14] Message 'Synth 8-5545' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-5546] ROM "sof_temp" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "sobel_valid" won't be mapped to RAM because it is too sparse
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                     Old Encoding 
+---------------------------------------------------------------------------------------------------
+                  iSTATE |                              000 |                              000
+                 iSTATE0 |                              001 |                              001
+                 iSTATE1 |                              010 |                              010
+                 iSTATE2 |                              011 |                              011
+                 iSTATE3 |                              100 |                              100
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'count_reg' using encoding 'sequential' in module 'sobel_edge_detect'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:15 ; elapsed = 00:00:18 . Memory (MB): peak = 471.457 ; gain = 295.477
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++------+-----------------+------------+----------+
+|      |RTL Partition    |Replication |Instances |
++------+-----------------+------------+----------+
+|1     |edge_detect__GB0 |           1|     33797|
+|2     |edge_detect__GB1 |           1|      9353|
+|3     |edge_detect__GB2 |           1|     11648|
++------+-----------------+------------+----------+
+No constraint files found.
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     18 Bit       Adders := 1     
+	   5 Input     17 Bit       Adders := 1     
+	   3 Input     17 Bit       Adders := 4     
+	   2 Input     11 Bit       Adders := 1     
+	   2 Input     10 Bit       Adders := 5     
+	   2 Input      9 Bit       Adders := 2     
+	   2 Input      3 Bit       Adders := 1     
++---Registers : 
+	               20 Bit    Registers := 1     
+	               18 Bit    Registers := 1     
+	               17 Bit    Registers := 4     
+	               10 Bit    Registers := 2     
+	                9 Bit    Registers := 1     
+	                8 Bit    Registers := 648   
+	                3 Bit    Registers := 1     
+	                1 Bit    Registers := 5     
++---Muxes : 
+	   5 Input     17 Bit        Muxes := 9     
+	   2 Input     10 Bit        Muxes := 1     
+	   5 Input      9 Bit        Muxes := 1     
+	   2 Input      9 Bit        Muxes := 1     
+	   5 Input      8 Bit        Muxes := 2     
+	   7 Input      8 Bit        Muxes := 1     
+	   2 Input      8 Bit        Muxes := 7     
+	   4 Input      8 Bit        Muxes := 1     
+	   5 Input      3 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 10    
+	   5 Input      1 Bit        Muxes := 5     
+	   4 Input      1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module edge_detect 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     11 Bit       Adders := 1     
+	   2 Input     10 Bit       Adders := 5     
+	   2 Input      9 Bit       Adders := 1     
+	   2 Input      3 Bit       Adders := 1     
++---Registers : 
+	               10 Bit    Registers := 2     
+	                9 Bit    Registers := 1     
+	                8 Bit    Registers := 639   
+	                3 Bit    Registers := 1     
+	                1 Bit    Registers := 4     
++---Muxes : 
+	   2 Input     10 Bit        Muxes := 1     
+	   2 Input      9 Bit        Muxes := 1     
+	   2 Input      8 Bit        Muxes := 6     
+	   4 Input      8 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 9     
+	   4 Input      1 Bit        Muxes := 1     
+Module sobel_edge_detect 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     18 Bit       Adders := 1     
+	   5 Input     17 Bit       Adders := 1     
+	   3 Input     17 Bit       Adders := 4     
+	   2 Input      9 Bit       Adders := 1     
++---Registers : 
+	               20 Bit    Registers := 1     
+	               18 Bit    Registers := 1     
+	               17 Bit    Registers := 4     
+	                8 Bit    Registers := 9     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   5 Input     17 Bit        Muxes := 9     
+	   5 Input      9 Bit        Muxes := 1     
+	   5 Input      8 Bit        Muxes := 2     
+	   7 Input      8 Bit        Muxes := 1     
+	   2 Input      8 Bit        Muxes := 1     
+	   5 Input      3 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 1     
+	   5 Input      1 Bit        Muxes := 5     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 240 (col length:80)
+BRAMs: 270 (col length: RAMB18 80 RAMB36 40)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+Start Parallel Synthesis Optimization  : Time (s): cpu = 00:00:16 ; elapsed = 00:00:19 . Memory (MB): peak = 471.457 ; gain = 295.477
+---------------------------------------------------------------------------------
+Start Cross Boundary Optimization
+---------------------------------------------------------------------------------
+INFO: [Synth 8-41] '+' operator could not be merged with '+' operator due to loss of accuracy [C:/Users/yli/Desktop/edge_new/edge_new/edge_new.srcs/sources_1/new/edge_new.v:464]
+DSP Report: Generating DSP edge_norm1, operation Mode is: A*B.
+DSP Report: operator edge_norm1 is absorbed into DSP edge_norm1.
+DSP Report: Generating DSP edge_norm_reg, operation Mode is: (C+A*B)'.
+DSP Report: register edge_norm_reg is absorbed into DSP edge_norm_reg.
+DSP Report: operator edge_norm0 is absorbed into DSP edge_norm_reg.
+DSP Report: operator edge_norm1 is absorbed into DSP edge_norm_reg.
+INFO: [Synth 8-5546] ROM "sobel_valid" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "sof_temp" won't be mapped to RAM because it is too sparse
+WARNING: [Synth 8-3917] design edge_detect has port out_data[23] driven by constant 0
+WARNING: [Synth 8-3917] design edge_detect has port out_data[22] driven by constant 0
+WARNING: [Synth 8-3917] design edge_detect has port out_data[21] driven by constant 0
+WARNING: [Synth 8-3917] design edge_detect has port out_data[20] driven by constant 0
+WARNING: [Synth 8-3917] design edge_detect has port out_data[19] driven by constant 0
+WARNING: [Synth 8-3917] design edge_detect has port out_data[18] driven by constant 0
+WARNING: [Synth 8-3917] design edge_detect has port out_data[17] driven by constant 0
+WARNING: [Synth 8-3917] design edge_detect has port out_data[16] driven by constant 0
+WARNING: [Synth 8-3917] design edge_detect has port out_data[15] driven by constant 0
+WARNING: [Synth 8-3917] design edge_detect has port out_data[14] driven by constant 0
+WARNING: [Synth 8-3917] design edge_detect has port out_data[13] driven by constant 0
+WARNING: [Synth 8-3917] design edge_detect has port out_data[12] driven by constant 0
+WARNING: [Synth 8-3917] design edge_detect has port out_data[11] driven by constant 0
+WARNING: [Synth 8-3917] design edge_detect has port out_data[10] driven by constant 0
+WARNING: [Synth 8-3917] design edge_detect has port out_data[9] driven by constant 0
+WARNING: [Synth 8-3917] design edge_detect has port out_data[8] driven by constant 0
+WARNING: [Synth 8-3331] design edge_detect has unconnected port in_data[23]
+WARNING: [Synth 8-3331] design edge_detect has unconnected port in_data[22]
+WARNING: [Synth 8-3331] design edge_detect has unconnected port in_data[21]
+WARNING: [Synth 8-3331] design edge_detect has unconnected port in_data[20]
+WARNING: [Synth 8-3331] design edge_detect has unconnected port in_data[19]
+WARNING: [Synth 8-3331] design edge_detect has unconnected port in_data[18]
+WARNING: [Synth 8-3331] design edge_detect has unconnected port in_data[17]
+WARNING: [Synth 8-3331] design edge_detect has unconnected port in_data[16]
+WARNING: [Synth 8-3331] design edge_detect has unconnected port in_data[15]
+WARNING: [Synth 8-3331] design edge_detect has unconnected port in_data[14]
+WARNING: [Synth 8-3331] design edge_detect has unconnected port in_data[13]
+WARNING: [Synth 8-3331] design edge_detect has unconnected port in_data[12]
+WARNING: [Synth 8-3331] design edge_detect has unconnected port in_data[11]
+WARNING: [Synth 8-3331] design edge_detect has unconnected port in_data[10]
+WARNING: [Synth 8-3331] design edge_detect has unconnected port in_data[9]
+WARNING: [Synth 8-3331] design edge_detect has unconnected port in_data[8]
+WARNING: [Synth 8-3331] design edge_detect has unconnected port in_sof
+---------------------------------------------------------------------------------
+Finished Cross Boundary Optimization : Time (s): cpu = 00:00:23 ; elapsed = 00:00:30 . Memory (MB): peak = 479.652 ; gain = 303.672
+---------------------------------------------------------------------------------
+Finished Parallel Reinference  : Time (s): cpu = 00:00:23 ; elapsed = 00:00:30 . Memory (MB): peak = 479.652 ; gain = 303.672
+
+Report RTL Partitions: 
++------+-----------------+------------+----------+
+|      |RTL Partition    |Replication |Instances |
++------+-----------------+------------+----------+
+|1     |edge_detect__GB0 |           1|     34016|
+|2     |edge_detect__GB1 |           1|      9353|
+|3     |edge_detect__GB2 |           1|     11648|
++------+-----------------+------------+----------+
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Distributed RAM: 
++-----------------+------------+----------------+----------------------+----------------------------------------------+-------------------+
+|Module Name      | RTL Object | Inference      | Size (Depth x Width) | Primitives                                   | Hierarchical Name | 
++-----------------+------------+----------------+----------------------+----------------------------------------------+-------------------+
+|edge_detect__GB0 | row3_reg   | User Attribute | 1 K x 8              | RAM64X1D x 40  RAM128X1D x 40  RAM64M x 40   | ram__6            | 
+|edge_detect__GB0 | row2_reg   | User Attribute | 1 K x 8              | RAM128X1D x 40                               | ram__8            | 
+|edge_detect__GB0 | row1_reg   | User Attribute | 1 K x 8              | RAM64X1D x 60  RAM64M x 60                   | ram__10           | 
++-----------------+------------+----------------+----------------------+----------------------------------------------+-------------------+
+
+Note: The table shows the Distributed RAMs at the current stage of the synthesis flow. Some Distributed RAMs may be reimplemented as non Distributed RAM primitives later in the synthesis flow. Multiple instantiated RAMs are reported only once. "Hierarchical Name" reflects the Distributed RAM name as it appears in the hierarchical module and only part of it is displayed.
+DSP:
++------------------+-------------+--------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name       | DSP Mapping | Neg Edge Clk | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++------------------+-------------+--------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|sobel_edge_detect | A*B         | No           | 17     | 17     | 48     | 25     | 34     | 0    | 0    | 1    | 1    | 1     | 0    | 0    | 
+|sobel_edge_detect | (C+A*B)'    | No           | 17     | 17     | 20     | 25     | 20     | 0    | 0    | 0    | 1    | 1     | 0    | 1    | 
++------------------+-------------+--------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+Note: The table shows the DSPs inferred at the current stage of the synthesis flow. Some DSP may be reimplemented as non DSP primitives later in the synthesis flow. Multiple instantiated DSPs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-3332] Sequential element (\pix_23_reg[0] ) is unused and will be removed from module sobel_edge_detect.
+WARNING: [Synth 8-3332] Sequential element (\pix_23_reg[1] ) is unused and will be removed from module sobel_edge_detect.
+WARNING: [Synth 8-3332] Sequential element (\pix_23_reg[2] ) is unused and will be removed from module sobel_edge_detect.
+WARNING: [Synth 8-3332] Sequential element (\pix_23_reg[3] ) is unused and will be removed from module sobel_edge_detect.
+WARNING: [Synth 8-3332] Sequential element (\pix_23_reg[4] ) is unused and will be removed from module sobel_edge_detect.
+WARNING: [Synth 8-3332] Sequential element (\pix_23_reg[5] ) is unused and will be removed from module sobel_edge_detect.
+WARNING: [Synth 8-3332] Sequential element (\pix_23_reg[6] ) is unused and will be removed from module sobel_edge_detect.
+WARNING: [Synth 8-3332] Sequential element (\pix_23_reg[7] ) is unused and will be removed from module sobel_edge_detect.
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'i_0/sobel_bufout_reg[0][7]/Q' [C:/Users/yli/Desktop/edge_new/edge_new/edge_new.srcs/sources_1/new/edge_new.v:290]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [C:/Users/yli/Desktop/edge_new/edge_new/edge_new.srcs/sources_1/new/edge_new.v:290]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [C:/Users/yli/Desktop/edge_new/edge_new/edge_new.srcs/sources_1/new/edge_new.v:290]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'i_0/sobel_bufout_reg[0][6]/Q' [C:/Users/yli/Desktop/edge_new/edge_new/edge_new.srcs/sources_1/new/edge_new.v:290]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [C:/Users/yli/Desktop/edge_new/edge_new/edge_new.srcs/sources_1/new/edge_new.v:290]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [C:/Users/yli/Desktop/edge_new/edge_new/edge_new.srcs/sources_1/new/edge_new.v:290]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'i_0/sobel_bufout_reg[0][5]/Q' [C:/Users/yli/Desktop/edge_new/edge_new/edge_new.srcs/sources_1/new/edge_new.v:290]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [C:/Users/yli/Desktop/edge_new/edge_new/edge_new.srcs/sources_1/new/edge_new.v:290]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [C:/Users/yli/Desktop/edge_new/edge_new/edge_new.srcs/sources_1/new/edge_new.v:290]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'i_0/sobel_bufout_reg[0][4]/Q' [C:/Users/yli/Desktop/edge_new/edge_new/edge_new.srcs/sources_1/new/edge_new.v:290]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [C:/Users/yli/Desktop/edge_new/edge_new/edge_new.srcs/sources_1/new/edge_new.v:290]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [C:/Users/yli/Desktop/edge_new/edge_new/edge_new.srcs/sources_1/new/edge_new.v:290]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'i_0/sobel_bufout_reg[0][3]/Q' [C:/Users/yli/Desktop/edge_new/edge_new/edge_new.srcs/sources_1/new/edge_new.v:290]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [C:/Users/yli/Desktop/edge_new/edge_new/edge_new.srcs/sources_1/new/edge_new.v:290]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [C:/Users/yli/Desktop/edge_new/edge_new/edge_new.srcs/sources_1/new/edge_new.v:290]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'i_0/sobel_bufout_reg[0][2]/Q' [C:/Users/yli/Desktop/edge_new/edge_new/edge_new.srcs/sources_1/new/edge_new.v:290]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [C:/Users/yli/Desktop/edge_new/edge_new/edge_new.srcs/sources_1/new/edge_new.v:290]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [C:/Users/yli/Desktop/edge_new/edge_new/edge_new.srcs/sources_1/new/edge_new.v:290]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'i_0/sobel_bufout_reg[0][1]/Q' [C:/Users/yli/Desktop/edge_new/edge_new/edge_new.srcs/sources_1/new/edge_new.v:290]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [C:/Users/yli/Desktop/edge_new/edge_new/edge_new.srcs/sources_1/new/edge_new.v:290]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [C:/Users/yli/Desktop/edge_new/edge_new/edge_new.srcs/sources_1/new/edge_new.v:290]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'i_0/sobel_bufout_reg[0][0]/Q' [C:/Users/yli/Desktop/edge_new/edge_new/edge_new.srcs/sources_1/new/edge_new.v:290]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [C:/Users/yli/Desktop/edge_new/edge_new/edge_new.srcs/sources_1/new/edge_new.v:290]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [C:/Users/yli/Desktop/edge_new/edge_new/edge_new.srcs/sources_1/new/edge_new.v:290]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'i_0/sobel_bufout_reg[639][7]/Q' [C:/Users/yli/Desktop/edge_new/edge_new/edge_new.srcs/sources_1/new/edge_new.v:290]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [C:/Users/yli/Desktop/edge_new/edge_new/edge_new.srcs/sources_1/new/edge_new.v:290]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [C:/Users/yli/Desktop/edge_new/edge_new/edge_new.srcs/sources_1/new/edge_new.v:290]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'i_0/sobel_bufout_reg[639][6]/Q' [C:/Users/yli/Desktop/edge_new/edge_new/edge_new.srcs/sources_1/new/edge_new.v:290]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [C:/Users/yli/Desktop/edge_new/edge_new/edge_new.srcs/sources_1/new/edge_new.v:290]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [C:/Users/yli/Desktop/edge_new/edge_new/edge_new.srcs/sources_1/new/edge_new.v:290]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'i_0/sobel_bufout_reg[639][5]/Q' [C:/Users/yli/Desktop/edge_new/edge_new/edge_new.srcs/sources_1/new/edge_new.v:290]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [C:/Users/yli/Desktop/edge_new/edge_new/edge_new.srcs/sources_1/new/edge_new.v:290]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [C:/Users/yli/Desktop/edge_new/edge_new/edge_new.srcs/sources_1/new/edge_new.v:290]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'i_0/sobel_bufout_reg[639][4]/Q' [C:/Users/yli/Desktop/edge_new/edge_new/edge_new.srcs/sources_1/new/edge_new.v:290]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [C:/Users/yli/Desktop/edge_new/edge_new/edge_new.srcs/sources_1/new/edge_new.v:290]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [C:/Users/yli/Desktop/edge_new/edge_new/edge_new.srcs/sources_1/new/edge_new.v:290]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'i_0/sobel_bufout_reg[639][3]/Q' [C:/Users/yli/Desktop/edge_new/edge_new/edge_new.srcs/sources_1/new/edge_new.v:290]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [C:/Users/yli/Desktop/edge_new/edge_new/edge_new.srcs/sources_1/new/edge_new.v:290]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [C:/Users/yli/Desktop/edge_new/edge_new/edge_new.srcs/sources_1/new/edge_new.v:290]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'i_0/sobel_bufout_reg[639][2]/Q' [C:/Users/yli/Desktop/edge_new/edge_new/edge_new.srcs/sources_1/new/edge_new.v:290]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [C:/Users/yli/Desktop/edge_new/edge_new/edge_new.srcs/sources_1/new/edge_new.v:290]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [C:/Users/yli/Desktop/edge_new/edge_new/edge_new.srcs/sources_1/new/edge_new.v:290]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'i_0/sobel_bufout_reg[639][1]/Q' [C:/Users/yli/Desktop/edge_new/edge_new/edge_new.srcs/sources_1/new/edge_new.v:290]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [C:/Users/yli/Desktop/edge_new/edge_new/edge_new.srcs/sources_1/new/edge_new.v:290]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [C:/Users/yli/Desktop/edge_new/edge_new/edge_new.srcs/sources_1/new/edge_new.v:290]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 1st driver pin 'i_0/sobel_bufout_reg[639][0]/Q' [C:/Users/yli/Desktop/edge_new/edge_new/edge_new.srcs/sources_1/new/edge_new.v:290]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net Q with 2nd driver pin 'GND' [C:/Users/yli/Desktop/edge_new/edge_new/edge_new.srcs/sources_1/new/edge_new.v:290]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net Q is connected to constant driver, other driver is ignored [C:/Users/yli/Desktop/edge_new/edge_new/edge_new.srcs/sources_1/new/edge_new.v:290]
+---------------------------------------------------------------------------------
+Finished Area Optimization : Time (s): cpu = 00:00:30 ; elapsed = 00:00:38 . Memory (MB): peak = 583.570 ; gain = 407.590
+---------------------------------------------------------------------------------
+Finished Parallel Area Optimization  : Time (s): cpu = 00:00:30 ; elapsed = 00:00:38 . Memory (MB): peak = 583.570 ; gain = 407.590
+
+Report RTL Partitions: 
++------+-----------------+------------+----------+
+|      |RTL Partition    |Replication |Instances |
++------+-----------------+------------+----------+
+|1     |edge_detect__GB0 |           1|     14639|
+|2     |edge_detect__GB1 |           1|       232|
+|3     |edge_detect__GB2 |           1|       253|
++------+-----------------+------------+----------+
+Finished Parallel Synthesis Optimization  : Time (s): cpu = 00:00:30 ; elapsed = 00:00:38 . Memory (MB): peak = 583.570 ; gain = 407.590
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:30 ; elapsed = 00:00:38 . Memory (MB): peak = 583.570 ; gain = 407.590
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++------+-----------------+------------+----------+
+|      |RTL Partition    |Replication |Instances |
++------+-----------------+------------+----------+
+|1     |edge_detect__GB0 |           1|     14639|
+|2     |edge_detect__GB1 |           1|       232|
+|3     |edge_detect__GB2 |           1|       253|
++------+-----------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:33 ; elapsed = 00:00:40 . Memory (MB): peak = 583.570 ; gain = 407.590
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:34 ; elapsed = 00:00:41 . Memory (MB): peak = 583.570 ; gain = 407.590
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:34 ; elapsed = 00:00:41 . Memory (MB): peak = 583.570 ; gain = 407.590
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:34 ; elapsed = 00:00:41 . Memory (MB): peak = 583.570 ; gain = 407.590
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports : Time (s): cpu = 00:00:34 ; elapsed = 00:00:41 . Memory (MB): peak = 583.570 ; gain = 407.590
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:34 ; elapsed = 00:00:42 . Memory (MB): peak = 583.570 ; gain = 407.590
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+----------+------+
+|      |Cell      |Count |
++------+----------+------+
+|1     |BUFG      |     1|
+|2     |CARRY4    |    35|
+|3     |DSP48E1   |     2|
+|4     |LUT1      |     5|
+|5     |LUT2      |   103|
+|6     |LUT3      |    44|
+|7     |LUT4      |   182|
+|8     |LUT5      |   394|
+|9     |LUT6      |  2122|
+|10    |MUXF7     |   672|
+|11    |MUXF8     |   336|
+|12    |RAM128X1D |    80|
+|13    |RAM64M    |   100|
+|14    |RAM64X1D  |   100|
+|15    |FDRE      |  5360|
+|16    |IBUF      |    13|
+|17    |OBUF      |    28|
++------+----------+------+
+
+Report Instance Areas: 
++------+---------+------------------+------+
+|      |Instance |Module            |Cells |
++------+---------+------------------+------+
+|1     |top      |                  |  9577|
+|2     |  s1     |sobel_edge_detect |   667|
++------+---------+------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:34 ; elapsed = 00:00:42 . Memory (MB): peak = 583.570 ; gain = 407.590
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 48 critical warnings and 74 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:33 ; elapsed = 00:00:38 . Memory (MB): peak = 583.570 ; gain = 371.477
+Synthesis Optimization Complete : Time (s): cpu = 00:00:34 ; elapsed = 00:00:42 . Memory (MB): peak = 583.570 ; gain = 407.590
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 330 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 1 CPU seconds
+WARNING: [Netlist 29-101] Netlist 'edge_detect' is not ideal for floorplanning, since the cellview 'edge_detect' contains a large number of primitives.  Please consider enabling hierarchy in synthesis if you want to do floorplanning.
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 280 instances were transformed.
+  RAM128X1D => RAM128X1D (RAMD64E, RAMD64E, MUXF7, MUXF7, RAMD64E, RAMD64E): 80 instances
+  RAM64M => RAM64M (RAMD64E, RAMD64E, RAMD64E, RAMD64E): 100 instances
+  RAM64X1D => RAM64X1D (RAMD64E, RAMD64E): 100 instances
+
+INFO: [Common 17-83] Releasing license: Synthesis
+139 Infos, 75 Warnings, 48 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:36 ; elapsed = 00:00:43 . Memory (MB): peak = 583.570 ; gain = 375.852
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.218 . Memory (MB): peak = 583.570 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Mon Apr 04 00:11:16 2016...
